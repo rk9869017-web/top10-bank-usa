@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Top 10 Banks in USA · Professional Intro</title>
+  <title>Top 10 Banks in USA · Professional</title>
   <!-- Font Awesome 6 (free) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
@@ -19,6 +19,9 @@
       color: #1e2a3a;
       line-height: 1.6;
       padding: 2rem 1rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     .container {
@@ -28,7 +31,10 @@
       border-radius: 32px;
       box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
       overflow: hidden;
-      padding: 2.5rem 2rem;
+      padding: 2.5rem 2rem 1.5rem 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     /* ---- INTRO SECTION (expanded) ---- */
@@ -88,7 +94,7 @@
       margin-right: 0.4rem;
     }
 
-    /* expanded intro text (800 words approx) */
+    /* expanded intro text */
     .intro-expanded {
       max-width: 880px;
       margin: 1.8rem auto 0.8rem auto;
@@ -140,6 +146,7 @@
       display: flex;
       flex-direction: column;
       gap: 1.25rem;
+      margin-bottom: 2rem;
     }
 
     .bank-card {
@@ -248,7 +255,120 @@
       margin-left: 0.5rem;
     }
 
-    /* small screens */
+    /* ----- NEW PROFESSIONAL FOOTER ----- */
+    .professional-footer {
+      margin-top: 2rem;
+      border-top: 2px solid #eef2f7;
+      padding-top: 2rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-brand h3 {
+      font-size: 1.3rem;
+      color: #0a2540;
+      margin-bottom: 0.3rem;
+    }
+    .footer-brand h3 i {
+      color: #1a73e8;
+      margin-right: 6px;
+    }
+    .footer-brand p {
+      color: #4a5f7a;
+      font-size: 0.9rem;
+      max-width: 280px;
+    }
+
+    .footer-links h4 {
+      font-size: 1rem;
+      color: #0a2540;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links ul li a {
+      color: #3e5a76;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .footer-links ul li a i {
+      color: #1a73e8;
+      font-size: 0.8rem;
+      width: 1.1rem;
+    }
+
+    .footer-links ul li a:hover {
+      color: #0a2540;
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #e2eaf2;
+      padding-top: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: #5b6f87;
+    }
+
+    .footer-bottom .social-icons a {
+      color: #4a5f7a;
+      margin-left: 1rem;
+      font-size: 1.1rem;
+      transition: 0.2s;
+    }
+
+    .footer-bottom .social-icons a:hover {
+      color: #1a73e8;
+    }
+
+    /* responsive footer */
+    @media (max-width: 800px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer-bottom .social-icons a {
+        margin: 0 0.5rem;
+      }
+    }
+
+    /* small screens for cards */
     @media (max-width: 700px) {
       .container {
         padding: 1.5rem 1rem;
@@ -303,54 +423,9 @@
       }
     }
 
-    /* footer / credit */
+    /* old footer note replaced, but we keep it clean */
     .footer-note {
-      margin-top: 3.5rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #6b7f99;
-      border-top: 1px solid #e2eaf2;
-      padding-top: 2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.8rem;
-      flex-wrap: wrap;
-    }
-
-    .footer-note i {
-      color: #1a73e8;
-    }
-
-    .footer-note a {
-      color: #0a2540;
-      text-decoration: none;
-      font-weight: 500;
-      border-bottom: 1px dotted transparent;
-      transition: 0.2s;
-    }
-
-    .footer-note a:hover {
-      border-bottom-color: #1a73e8;
-      color: #1a5bbf;
-    }
-
-    .separator-dot {
-      display: inline-block;
-      width: 4px;
-      height: 4px;
-      background: #b8cae0;
-      border-radius: 50%;
-      margin: 0 0.4rem;
-    }
-
-    .badge-small {
-      background: #eaf1fd;
-      padding: 0.1rem 0.9rem;
-      border-radius: 30px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: #1a5bbf;
+      display: none;
     }
   </style>
 </head>
@@ -358,7 +433,7 @@
 
 <div class="container">
 
-  <!-- INTRODUCTION SECTION (expanded with ~800 words) -->
+  <!-- INTRODUCTION SECTION (expanded) -->
   <div class="intro-section">
     <div class="badge"><i class="fas fa-university" style="margin-right: 8px;"></i> 2026 ranking</div>
     <h1><i class="fas fa-building-columns"></i> Top 10 Banks in USA</h1>
@@ -370,7 +445,7 @@
       <i class="fas fa-chart-line"></i> Assets, reputation &amp; reach · Updated 2026
     </div>
 
-    <!-- EXPANDED INTRO (approx 800 words, rich content) -->
+    <!-- EXPANDED INTRO (~800 words) -->
     <div class="intro-expanded">
       <p><i class="fas fa-flag-usa"></i> <strong>The American banking system</strong> is the backbone of the global financial architecture. With total assets exceeding $24 trillion, U.S. banks serve over 300 million consumers and millions of businesses worldwide. The institutions listed here represent the pinnacle of stability, innovation, and service — from retail banking to investment management, wealth advisory, and cutting-edge fintech integration.</p>
 
@@ -398,9 +473,8 @@
     </div>
   </div>
 
-  <!-- TOP 10 BANK LIST (unchanged, professional) -->
+  <!-- TOP 10 BANK LIST -->
   <div class="bank-grid">
-
     <!-- 1. JPMorgan Chase -->
     <div class="bank-card">
       <div class="bank-rank">#1</div>
@@ -417,7 +491,6 @@
         </div>
       </div>
     </div>
-
     <!-- 2. Bank of America -->
     <div class="bank-card">
       <div class="bank-rank">#2</div>
@@ -434,7 +507,6 @@
         </div>
       </div>
     </div>
-
     <!-- 3. Wells Fargo -->
     <div class="bank-card">
       <div class="bank-rank">#3</div>
@@ -451,7 +523,6 @@
         </div>
       </div>
     </div>
-
     <!-- 4. Citigroup -->
     <div class="bank-card">
       <div class="bank-rank">#4</div>
@@ -468,7 +539,6 @@
         </div>
       </div>
     </div>
-
     <!-- 5. Goldman Sachs -->
     <div class="bank-card">
       <div class="bank-rank">#5</div>
@@ -485,7 +555,6 @@
         </div>
       </div>
     </div>
-
     <!-- 6. Morgan Stanley -->
     <div class="bank-card">
       <div class="bank-rank">#6</div>
@@ -502,7 +571,6 @@
         </div>
       </div>
     </div>
-
     <!-- 7. U.S. Bancorp -->
     <div class="bank-card">
       <div class="bank-rank">#7</div>
@@ -519,7 +587,6 @@
         </div>
       </div>
     </div>
-
     <!-- 8. PNC Financial Services -->
     <div class="bank-card">
       <div class="bank-rank">#8</div>
@@ -536,7 +603,6 @@
         </div>
       </div>
     </div>
-
     <!-- 9. Truist Financial -->
     <div class="bank-card">
       <div class="bank-rank">#9</div>
@@ -553,7 +619,6 @@
         </div>
       </div>
     </div>
-
     <!-- 10. Capital One -->
     <div class="bank-card">
       <div class="bank-rank">#10</div>
@@ -572,14 +637,52 @@
     </div>
   </div>
 
-  <!-- FOOTER / PROFESSIONAL CLOSING -->
-  <div class="footer-note">
-    <span><i class="fas fa-database"></i> Data based on 2026 Federal Reserve &amp; market reports</span>
-    <span class="separator-dot"></span>
-    <span><i class="fas fa-shield-alt"></i> Trusted institutions · FDIC insured</span>
-    <span class="separator-dot"></span>
-    <span><i class="fas fa-code"></i> Designed with <i class="fas fa-heart" style="color: #d44c4c;"></i> for clarity</span>
-  </div>
+  <!-- ======== NEW PROFESSIONAL FOOTER ======== -->
+  <footer class="professional-footer">
+    <div class="footer-grid">
+      <!-- brand -->
+      <div class="footer-brand">
+        <h3><i class="fas fa-building-columns"></i> Top10Banks</h3>
+        <p>Your trusted guide to America's leading financial institutions. Data-driven, transparent, and professional.</p>
+      </div>
+      <!-- navigation -->
+      <div class="footer-links">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+          <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+      </div>
+      <!-- legal -->
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#"><i class="fas fa-file-contract"></i> Terms &amp; Conditions</a></li>
+          <li><a href="#"><i class="fas fa-lock"></i> Privacy Policy</a></li>
+        </ul>
+      </div>
+      <!-- extra -->
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#"><i class="fas fa-newspaper"></i> Blog</a></li>
+          <li><a href="#"><i class="fas fa-chart-simple"></i> Market Data</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- bottom bar -->
+    <div class="footer-bottom">
+      <span>© 2026 Top10Banks. All rights reserved.</span>
+      <div class="social-icons">
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="RSS"><i class="fas fa-rss"></i></a>
+      </div>
+    </div>
+  </footer>
 
 </div>
 <!-- end container -->
