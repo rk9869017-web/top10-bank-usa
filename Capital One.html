@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capital One · In-Depth Profile</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f4f7fc;
+            color: #1e2a3a;
+            line-height: 1.6;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0.5rem 0.8rem 0.5rem;
+            border-bottom: 2px solid #eef2f7;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(10, 37, 64, 0.15);
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo-text {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0a2540;
+            letter-spacing: -0.5px;
+        }
+        .logo-text span {
+            color: #1a73e8;
+        }
+
+        .header-tagline {
+            font-size: 0.85rem;
+            color: #4a5f7a;
+            background: #eef6ff;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-weight: 500;
+        }
+        .header-tagline i {
+            color: #1a73e8;
+            margin-right: 4px;
+        }
+
+        /* ===== BACK LINK ===== */
+        .back-link {
+            margin-bottom: 1.5rem;
+        }
+        .back-link a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+            color: #0a2540;
+        }
+
+        /* ===== PROFILE HERO ===== */
+        .profile-hero {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: #f9fcff;
+            border-radius: 28px;
+            padding: 2rem 2.5rem;
+            border: 1px solid #e2ecf7;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .profile-hero .bank-big-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(145deg, #122b44, #0a1e30);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.8rem;
+            box-shadow: 0 10px 20px rgba(10, 37, 64, 0.12);
+            flex-shrink: 0;
+        }
+
+        .profile-hero .hero-text h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #0a2540;
+            letter-spacing: -0.02em;
+        }
+        .profile-hero .hero-text h1 span {
+            color: #1a73e8;
+        }
+        .profile-hero .hero-text .ticker-large {
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: #5b6f87;
+            background: #eef2f7;
+            padding: 0.2rem 1.2rem;
+            border-radius: 40px;
+            margin-left: 0.8rem;
+        }
+        .profile-hero .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 0.4rem;
+            flex-wrap: wrap;
+        }
+        .profile-hero .hero-stats span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 1rem;
+            color: #2c405a;
+        }
+        .profile-hero .hero-stats i {
+            color: #1a73e8;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .profile-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .profile-content p {
+            font-size: 1.05rem;
+            color: #1e2f44;
+        }
+
+        .profile-content h2 {
+            font-size: 1.6rem;
+            color: #0a2540;
+            margin-top: 0.3rem;
+            margin-bottom: 0.2rem;
+            font-weight: 600;
+            border-bottom: 2px solid #eef2f7;
+            padding-bottom: 0.3rem;
+        }
+
+        .profile-content h2 i {
+            color: #1a73e8;
+            margin-right: 0.6rem;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            background: #f9fcff;
+            padding: 1.2rem 1.5rem;
+            border-radius: 20px;
+            border: 1px solid #e2ecf7;
+            margin: 0.5rem 0;
+        }
+        .stat-grid .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .stat-grid .stat-item .label {
+            font-size: 0.8rem;
+            color: #5b6f87;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .stat-grid .stat-item .value {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0a2540;
+        }
+
+        /* ===== FOOTER ===== */
+        .professional-footer {
+            margin-top: 1.5rem;
+            border-top: 2px solid #eef2f7;
+            padding-top: 1.8rem;
+            padding-bottom: 0.8rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.2rem;
+            color: #0a2540;
+            margin-bottom: 0.2rem;
+        }
+        .footer-brand h3 i {
+            color: #1a73e8;
+            margin-right: 6px;
+        }
+        .footer-brand p {
+            color: #4a5f7a;
+            font-size: 0.85rem;
+            max-width: 260px;
+        }
+
+        .footer-links h4 {
+            font-size: 0.95rem;
+            color: #0a2540;
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-links ul li {
+            margin-bottom: 0.4rem;
+        }
+        .footer-links ul li a {
+            color: #3e5a76;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .footer-links ul li a i {
+            color: #1a73e8;
+            font-size: 0.75rem;
+            width: 1rem;
+        }
+        .footer-links ul li a:hover {
+            color: #0a2540;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #e2eaf2;
+            padding-top: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            color: #5b6f87;
+        }
+
+        .disclaimer {
+            margin-top: 0.8rem;
+            font-size: 0.75rem;
+            color: #7a8fa0;
+            text-align: center;
+            border-top: 1px solid #eef2f7;
+            padding-top: 0.8rem;
+            width: 100%;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .container {
+                padding: 0 1rem 1rem 1rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.2rem;
+            }
+            .profile-hero {
+                padding: 1.5rem;
+            }
+            .profile-hero .hero-text h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 0 0.8rem 0.8rem 0.8rem;
+            }
+            .profile-hero {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.2rem;
+            }
+            .profile-hero .bank-big-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+            }
+            .profile-hero .hero-text h1 {
+                font-size: 1.8rem;
+            }
+            .profile-hero .hero-text .ticker-large {
+                font-size: 0.9rem;
+                padding: 0.1rem 0.8rem;
+                margin-left: 0;
+                display: inline-block;
+                margin-top: 0.2rem;
+            }
+            .profile-hero .hero-stats {
+                gap: 1rem;
+            }
+            .profile-content p {
+                font-size: 0.95rem;
+            }
+            .stat-grid {
+                grid-template-columns: 1fr 1fr;
+                padding: 1rem;
+            }
+            .site-header {
+                padding: 0.8rem 0.2rem 0.6rem 0.2rem;
+            }
+            .logo-text {
+                font-size: 1.3rem;
+            }
+            .header-tagline {
+                font-size: 0.7rem;
+                padding: 0.2rem 0.7rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profile-hero .hero-stats {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            .stat-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <header class="site-header">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <img src="https://top10-bank-usa.rk9869017.workers.dev/logo1.jpg" alt="Southwindtech Logo">
+                </div>
+                <div class="logo-text">South<span>wind</span>tech</div>
+            </div>
+            <div class="header-tagline">
+                <i class="fas fa-flag-usa"></i> Top 10 Guide by <strong>Southwindtech</strong>
+            </div>
+        </header>
+
+        <!-- ===== BACK LINK to Homepage ===== -->
+        <div class="back-link">
+            <a href="https://top10-bank-usa.rk9869017.workers.dev/"><i class="fas fa-arrow-left"></i> Back to Top 10 Banks</a>
+        </div>
+
+        <!-- ===== PROFILE HERO ===== -->
+        <div class="profile-hero">
+            <div class="bank-big-icon"><i class="fas fa-credit-card"></i></div>
+            <div class="hero-text">
+                <h1>Capital One <span class="ticker-large">COF</span></h1>
+                <div class="hero-stats">
+                    <span><i class="fas fa-dollar-sign"></i> $480B assets</span>
+                    <span><i class="fas fa-globe-americas"></i> McLean, VA</span>
+                    <span><i class="fas fa-users"></i> 55k+ employees</span>
+                    <span><i class="fas fa-star"></i> A- rating</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== MAIN CONTENT (800+ words) ===== -->
+        <div class="profile-content">
+
+            <h2><i class="fas fa-flag-usa"></i> Overview</h2>
+            <p><strong>Capital One Financial Corporation</strong> is a leading American financial services company and one of the largest banking institutions in the United States. Headquartered in McLean, Virginia, Capital One was founded in 1988 as a spin-off from Signet Banking Corporation. The company revolutionized the credit card industry with its data-driven approach, using advanced analytics to personalize offers and manage risk. Today, Capital One is the tenth-largest bank in the U.S. by total assets, with over <strong>$480 billion in assets</strong>, and serves more than 65 million customers across the country.</p>
+
+            <p>Capital One is best known for its innovative credit card products, including the popular Venture, Quicksilver, and Savor cards, which offer competitive rewards and benefits. The bank has also expanded into retail banking, auto lending, and commercial banking, providing a comprehensive suite of financial products and services to consumers, small businesses, and commercial clients. Its digital-first strategy has made it a favorite among tech-savvy consumers, with a mobile app that consistently ranks among the best in the industry.</p>
+
+            <div class="stat-grid">
+                <div class="stat-item"><span class="label">Total Assets</span><span class="value">$480B</span></div>
+                <div class="stat-item"><span class="label">Market Cap</span><span class="value">~$55B</span></div>
+                <div class="stat-item"><span class="label">Employees</span><span class="value">55,000+</span></div>
+                <div class="stat-item"><span class="label">Credit Rating</span><span class="value">A-</span></div>
+            </div>
+
+            <h2><i class="fas fa-chart-line"></i> Business &amp; Operations</h2>
+            <p>Capital One operates through three primary business segments: <strong>Credit Card</strong>, <strong>Consumer Banking</strong>, and <strong>Commercial Banking</strong>. The Credit Card segment is the company's flagship business, offering a diverse portfolio of general-purpose and co-branded credit cards. Capital One is one of the largest credit card issuers in the United States, with over $150 billion in credit card loans and a growing market share. The company's data-driven approach has enabled it to develop highly targeted marketing strategies and sophisticated risk management models.</p>
+
+            <p>The <strong>Consumer Banking</strong> segment provides deposit, lending, and payment services to individuals and small businesses. Capital One operates approximately 300 retail branches in major metropolitan areas, primarily in the Northeast, Mid-Atlantic, and Southeast. The bank also offers a robust digital banking platform, including the Capital One 360 suite, which provides online checking and savings accounts, CDs, and money market accounts. Capital One is also a leading auto lender, with a significant portfolio of direct and indirect auto loans.</p>
+
+            <p>The <strong>Commercial Banking</strong> segment serves middle-market companies, large corporations, and government entities with lending, treasury management, and advisory services. Capital One is a significant player in commercial lending, particularly in the healthcare, real estate, and technology sectors. The bank's commercial banking division has grown substantially in recent years, leveraging its data analytics capabilities to serve clients more effectively.</p>
+
+            <h2><i class="fas fa-shield-alt"></i> Safety, Regulation &amp; Trust</h2>
+            <p>Capital One is subject to rigorous oversight from the Federal Reserve, OCC, and FDIC. The bank maintains a strong capital position, with a Common Equity Tier 1 (CET1) ratio of over 10%, well above regulatory minimums. This capital strength ensures Capital One can withstand economic volatility and continue lending during downturns, supporting its customers and the broader financial system.</p>
+
+            <p>Capital One has also been a leader in transparency and consumer protection. The bank has invested heavily in fraud detection and cybersecurity, and its commitment to data privacy and customer security has earned it high marks from consumer advocacy groups. Capital One's "Capital One Cares" initiative has provided significant funding for community development, including affordable housing, small business growth, and financial literacy programs.</p>
+
+            <p>Community engagement is a cornerstone of Capital One's mission. The bank invests over <strong>$200 million annually</strong> in community development, supporting affordable housing, small business growth, and financial literacy programs. Capital One employees volunteer more than 500,000 hours each year, reinforcing the bank's commitment to the communities it serves.</p>
+
+            <h2><i class="fas fa-rocket"></i> Innovation &amp; Future Outlook</h2>
+            <p>Capital One is at the forefront of digital banking innovation. Its mobile app serves over 30 million active users, offering features like real-time spending insights, predictive budgeting tools, and AI-powered virtual assistance. The bank invests over <strong>$5 billion annually in technology</strong>, focusing on cloud computing, artificial intelligence, and blockchain integration. Capital One's digital transformation strategy aims to enhance customer experience while improving operational efficiency and reducing costs.</p>
+
+            <p>Looking ahead, Capital One is expanding its digital-first strategy with plans to open new "phygital" branches that combine the convenience of online banking with personalized human interaction. The bank is also exploring the use of blockchain for cross-border payments and trade finance, aiming to reduce settlement times and costs for its clients. Additionally, Capital One is a leader in the transition to a low-carbon economy, with a commitment to achieve net-zero operational emissions by 2030 and net-zero financed emissions by 2050.</p>
+
+            <p>With a diversified business model, a strong capital base, and a relentless focus on innovation and sustainability, Capital One is well-positioned to continue its legacy as a pillar of American banking. Its ability to adapt to changing consumer needs and regulatory environments while maintaining profitability has made it a favorite among investors and customers alike.</p>
+
+            <p style="margin-top: 1rem; font-size: 0.95rem; color: #2a4a6a; border-top: 1px solid #deeaf5; padding-top: 0.8rem;">
+                <i class="fas fa-info-circle" style="color: #1a73e8;"></i> This profile is for informational purposes. Data is based on Q2 2026 reports and public disclosures. Always consult official sources for the latest information.
+            </p>
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="professional-footer">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3><i class="fas fa-building-columns"></i> Southwindtech</h3>
+                    <p>Your trusted guide to America's leading financial institutions. Data-driven, transparent, and professional.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="https://top10-bank-usa.rk9869017.workers.dev/"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-file-contract"></i> Terms &amp; Conditions</a></li>
+                        <li><a href="#"><i class="fas fa-lock"></i> Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Southwindtech. All rights reserved.</span>
+            </div>
+
+            <div class="disclaimer">
+                <i class="fas fa-exclamation-triangle" style="margin-right: 6px; color: #b0c4de;"></i>
+                Disclaimer: The information provided on this website is for general informational purposes only. 
+                All bank rankings, asset figures, and ratings are based on publicly available data and are subject to change. 
+                We do not guarantee the accuracy or completeness of this information. Always consult official sources for the latest data.
+            </div>
+        </footer>
+
+    </div>
+    <!-- end container -->
+</body>
+</html>
