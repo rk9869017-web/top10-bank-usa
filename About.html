@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About · Top 10 Banks in USA</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f4f7fc;
+      color: #1e2a3a;
+      line-height: 1.6;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+      padding: 0 1.5rem 1.5rem 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0.5rem 0.8rem 0.5rem;
+      border-bottom: 2px solid #eef2f7;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 4px 10px rgba(10, 37, 64, 0.15);
+    }
+
+    .logo-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .logo-text {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #0a2540;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-text span {
+      color: #1a73e8;
+    }
+
+    .header-tagline {
+      font-size: 0.85rem;
+      color: #4a5f7a;
+      background: #eef6ff;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-weight: 500;
+    }
+
+    .header-tagline i {
+      color: #1a73e8;
+      margin-right: 4px;
+    }
+
+    /* ===== BACK LINK ===== */
+    .back-link {
+      margin-bottom: 1.5rem;
+    }
+    .back-link a {
+      color: #1a73e8;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      transition: 0.2s;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+      color: #0a2540;
+    }
+
+    /* ===== ABOUT CONTENT ===== */
+    .about-hero {
+      text-align: center;
+      padding: 2rem 0.5rem 2rem 0.5rem;
+      border-bottom: 2px solid #eef2f7;
+      margin-bottom: 2rem;
+    }
+
+    .about-hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #0a2540;
+      margin-bottom: 0.5rem;
+    }
+
+    .about-hero h1 i {
+      color: #1a73e8;
+      margin-right: 0.5rem;
+    }
+
+    .about-hero .subhead {
+      font-size: 1.2rem;
+      color: #425466;
+      max-width: 780px;
+      margin: 0 auto 0.5rem auto;
+      font-weight: 400;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .about-content h2 {
+      font-size: 1.6rem;
+      color: #0a2540;
+      margin-top: 0.3rem;
+      margin-bottom: 0.2rem;
+      font-weight: 600;
+      border-bottom: 2px solid #eef2f7;
+      padding-bottom: 0.3rem;
+    }
+
+    .about-content h2 i {
+      color: #1a73e8;
+      margin-right: 0.6rem;
+    }
+
+    .about-content p {
+      font-size: 1.05rem;
+      color: #1e2f44;
+      margin-bottom: 0.8rem;
+    }
+
+    .about-content ul {
+      list-style: none;
+      padding-left: 0.5rem;
+    }
+
+    .about-content ul li {
+      padding: 0.3rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 1rem;
+      color: #1e2f44;
+    }
+
+    .about-content ul li i {
+      color: #1a73e8;
+      margin-top: 0.2rem;
+      width: 1.2rem;
+    }
+
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin: 0.5rem 0 1rem 0;
+    }
+
+    .mission-card {
+      background: #f9fcff;
+      padding: 1.5rem 1.2rem;
+      border-radius: 16px;
+      border: 1px solid #e2ecf7;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .mission-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: 0 8px 16px -4px rgba(0, 20, 40, 0.06);
+    }
+
+    .mission-card i {
+      font-size: 2.2rem;
+      color: #1a73e8;
+      margin-bottom: 0.5rem;
+    }
+
+    .mission-card h4 {
+      font-size: 1.1rem;
+      color: #0a2540;
+      margin-bottom: 0.3rem;
+    }
+
+    .mission-card p {
+      font-size: 0.9rem;
+      color: #4a5f7a;
+      margin-bottom: 0;
+    }
+
+    /* ===== FOOTER ===== */
+    .professional-footer {
+      margin-top: 1.5rem;
+      border-top: 2px solid #eef2f7;
+      padding-top: 1.8rem;
+      padding-bottom: 0.8rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-brand h3 {
+      font-size: 1.2rem;
+      color: #0a2540;
+      margin-bottom: 0.2rem;
+    }
+    .footer-brand h3 i {
+      color: #1a73e8;
+      margin-right: 6px;
+    }
+    .footer-brand p {
+      color: #4a5f7a;
+      font-size: 0.85rem;
+      max-width: 260px;
+    }
+
+    .footer-links h4 {
+      font-size: 0.95rem;
+      color: #0a2540;
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-links ul li {
+      margin-bottom: 0.4rem;
+    }
+    .footer-links ul li a {
+      color: #3e5a76;
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .footer-links ul li a i {
+      color: #1a73e8;
+      font-size: 0.75rem;
+      width: 1rem;
+    }
+    .footer-links ul li a:hover {
+      color: #0a2540;
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #e2eaf2;
+      padding-top: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: #5b6f87;
+    }
+
+    .footer-bottom .social-icons {
+      display: none;
+    }
+
+    .disclaimer {
+      margin-top: 0.8rem;
+      font-size: 0.75rem;
+      color: #7a8fa0;
+      text-align: center;
+      border-top: 1px solid #eef2f7;
+      padding-top: 0.8rem;
+      width: 100%;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .container {
+        padding: 0 1rem 1rem 1rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+      }
+      .about-hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        padding: 0 0.8rem 0.8rem 0.8rem;
+      }
+      .about-hero {
+        padding: 1rem 0.2rem 1.2rem 0.2rem;
+      }
+      .about-hero h1 {
+        font-size: 1.8rem;
+      }
+      .about-hero .subhead {
+        font-size: 1rem;
+      }
+      .about-content p {
+        font-size: 0.95rem;
+      }
+      .mission-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+      }
+      .site-header {
+        padding: 0.8rem 0.2rem 0.6rem 0.2rem;
+      }
+      .logo-text {
+        font-size: 1.3rem;
+      }
+      .header-tagline {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.7rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+        text-align: center;
+      }
+      .footer-brand p {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .footer-links ul li a {
+        justify-content: center;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 0.5rem 0.5rem 0.5rem;
+      }
+      .about-hero h1 {
+        font-size: 1.5rem;
+      }
+      .mission-grid {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+      }
+      .logo-text {
+        font-size: 1rem;
+      }
+      .logo-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+        border-radius: 10px;
+      }
+      .header-tagline {
+        font-size: 0.55rem;
+        padding: 0.15rem 0.5rem;
+      }
+      .footer-brand h3 {
+        font-size: 1rem;
+      }
+      .footer-brand p {
+        font-size: 0.75rem;
+      }
+      .footer-links h4 {
+        font-size: 0.8rem;
+      }
+      .footer-links ul li a {
+        font-size: 0.75rem;
+      }
+      .footer-bottom {
+        font-size: 0.7rem;
+      }
+      .disclaimer {
+        font-size: 0.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="logo-area">
+      <div class="logo-icon">
+        <img src="https://top10-bank-usa.rk9869017.workers.dev/logo1.jpg" alt="Southwindtech Logo">
+      </div>
+      <div class="logo-text">Top<span>10</span>Banks</div>
+    </div>
+    <div class="header-tagline">
+      <i class="fas fa-flag-usa"></i> Top 10 Guide by <strong>Southwindtech</strong>
+    </div>
+  </header>
+
+  <!-- ===== BACK LINK ===== -->
+  <div class="back-link">
+    <a href="https://top10-bank-usa.rk9869017.workers.dev/"><i class="fas fa-arrow-left"></i> Back to Home</a>
+  </div>
+
+  <!-- ===== ABOUT HERO ===== -->
+  <div class="about-hero">
+    <h1><i class="fas fa-info-circle"></i> About Us</h1>
+    <p class="subhead">
+      Your trusted source for understanding America's leading financial institutions.
+      We provide data-driven insights, transparent rankings, and professional analysis.
+    </p>
+  </div>
+
+  <!-- ===== ABOUT CONTENT ===== -->
+  <div class="about-content">
+
+    <div>
+      <h2><i class="fas fa-bullseye"></i> Our Mission</h2>
+      <p>At <strong>Top10Banks</strong>, our mission is to empower individuals, businesses, and investors with clear, accurate, and actionable information about the United States' most important financial institutions. We believe that understanding the banking landscape is essential for making informed financial decisions, whether you're choosing a checking account, evaluating investment opportunities, or analyzing systemic risk.</p>
+    </div>
+
+    <div>
+      <h2><i class="fas fa-database"></i> Our Data &amp; Methodology</h2>
+      <p>Our rankings are based on a comprehensive composite of publicly available data sourced from the following authoritative sources:</p>
+      <ul>
+        <li><i class="fas fa-building-columns"></i> <strong>Federal Reserve Reports</strong> — Quarterly financial data, stress test results, and systemic risk indicators.</li>
+        <li><i class="fas fa-chart-line"></i> <strong>S&amp;P Global Market Intelligence</strong> — Industry benchmarking, credit ratings, and market capitalization.</li>
+        <li><i class="fas fa-star"></i> <strong>Independent Analyst Ratings</strong> — Customer satisfaction surveys, brand value assessments, and regulatory compliance scores.</li>
+        <li><i class="fas fa-shield-alt"></i> <strong>FDIC &amp; OCC Filings</strong> — Deposit and asset data, capital adequacy ratios, and insurance status.</li>
+      </ul>
+      <p>We update our rankings quarterly to reflect the latest financial disclosures, regulatory changes, and market developments. Our composite scoring methodology assigns weight to assets (40%), market capitalization (20%), customer satisfaction (15%), regulatory standing (15%), and digital innovation (10%).</p>
+    </div>
+
+    <div>
+      <h2><i class="fas fa-handshake"></i> Our Values</h2>
+      <div class="mission-grid">
+        <div class="mission-card">
+          <i class="fas fa-regular fa-circle-check"></i>
+          <h4>Transparency</h4>
+          <p>We clearly disclose our data sources, methodology, and any limitations in our analysis.</p>
+        </div>
+        <div class="mission-card">
+          <i class="fas fa-regular fa-compass"></i>
+          <h4>Objectivity</h4>
+          <p>Our rankings are unbiased and based solely on quantitative data and verifiable metrics.</p>
+        </div>
+        <div class="mission-card">
+          <i class="fas fa-regular fa-clock"></i>
+          <h4>Currency</h4>
+          <p>We ensure our information reflects the most recent financial reports and market conditions.</p>
+        </div>
+        <div class="mission-card">
+          <i class="fas fa-regular fa-users"></i>
+          <h4>Accessibility</h4>
+          <p>We present complex financial data in a clear, user-friendly format for all audiences.</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2><i class="fas fa-rocket"></i> Our Team</h2>
+      <p><strong>Southwindtech</strong> is a team of financial analysts, data scientists, and web developers dedicated to demystifying the banking sector. Our combined expertise spans investment banking, financial regulation, data analytics, and user experience design. We are passionate about making financial information accessible and useful for everyone — from first-time savers to seasoned institutional investors.</p>
+      <p>We are headquartered in the United States and operate remotely, allowing us to access and analyze data from across the globe. Our team is committed to continuous learning and improvement, ensuring our content remains relevant and reliable.</p>
+    </div>
+
+    <div>
+      <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+      <p>We welcome your feedback, questions, and suggestions. Whether you have a question about our methodology, want to suggest a bank for inclusion, or need help understanding our data, we're here to help.</p>
+      <p style="margin-top: 0.5rem;">
+        <i class="fas fa-envelope" style="color: #1a73e8; margin-right: 0.5rem;"></i> 
+        <strong>Email:</strong> <a href="mailto:info@southwindtech.com" style="color: #1a73e8; text-decoration: none;">info@southwindtech.com</a>
+      </p>
+      <p>
+        <i class="fas fa-globe" style="color: #1a73e8; margin-right: 0.5rem;"></i> 
+        <strong>Website:</strong> <a href="https://top10-bank-usa.rk9869017.workers.dev/" style="color: #1a73e8; text-decoration: none;">top10-bank-usa.rk9869017.workers.dev</a>
+      </p>
+      <p style="margin-top: 0.5rem; font-size: 0.95rem; color: #5b6f87;">
+        <i class="fas fa-clock" style="color: #1a73e8;"></i> We aim to respond to all inquiries within 2-3 business days.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="professional-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3><i class="fas fa-building-columns"></i> Top10Banks</h3>
+        <p>Your trusted guide to America's leading financial institutions. Data-driven, transparent, and professional.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="https://top10-bank-usa.rk9869017.workers.dev/"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+          <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#"><i class="fas fa-file-contract"></i> Terms &amp; Conditions</a></li>
+          <li><a href="#"><i class="fas fa-lock"></i> Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Top10Banks. All rights reserved.</span>
+    </div>
+
+    <div class="disclaimer">
+      <i class="fas fa-exclamation-triangle" style="margin-right: 6px; color: #b0c4de;"></i>
+      Disclaimer: The information provided on this website is for general informational purposes only. 
+      All bank rankings, asset figures, and ratings are based on publicly available data and are subject to change. 
+      We do not guarantee the accuracy or completeness of this information. Always consult official sources for the latest data.
+    </div>
+  </footer>
+
+</div>
+<!-- end container -->
+</body>
+</html>
