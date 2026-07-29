@@ -221,7 +221,6 @@
       transform: scale(1.003);
     }
 
-    /* Make the whole card clickable */
     .bank-card a {
       display: contents;
       text-decoration: none;
@@ -327,7 +326,7 @@
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr;
       gap: 2rem;
       margin-bottom: 1.2rem;
     }
@@ -400,12 +399,23 @@
     .footer-bottom .social-icons a {
       color: #4a5f7a;
       margin-left: 0.8rem;
-      font-size: 1rem;
+      font-size: 1.1rem;
       transition: 0.2s;
     }
 
     .footer-bottom .social-icons a:hover {
       color: #1a73e8;
+    }
+
+    /* Disclaimer */
+    .disclaimer {
+      margin-top: 0.8rem;
+      font-size: 0.75rem;
+      color: #7a8fa0;
+      text-align: center;
+      border-top: 1px solid #eef2f7;
+      padding-top: 0.8rem;
+      width: 100%;
     }
 
     /* ===== RESPONSIVE ===== */
@@ -552,7 +562,7 @@
 
   <!-- ===== BANK GRID ===== -->
   <div class="bank-grid">
-    <!-- 1. JPMorgan Chase (with link) -->
+    <!-- 1. JPMorgan Chase -->
     <div class="bank-card">
       <a href="https://top10-bank-usa.rk9869017.workers.dev/JPMorgan%20Chase" target="_blank">
         <div class="bank-rank">#1</div>
@@ -747,13 +757,6 @@
           <li><a href="#"><i class="fas fa-lock"></i> Privacy Policy</a></li>
         </ul>
       </div>
-      <div class="footer-links">
-        <h4>Resources</h4>
-        <ul>
-          <li><a href="#"><i class="fas fa-newspaper"></i> Blog</a></li>
-          <li><a href="#"><i class="fas fa-chart-simple"></i> Market Data</a></li>
-        </ul>
-      </div>
     </div>
 
     <div class="footer-bottom">
@@ -764,6 +767,14 @@
         <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         <a href="#" aria-label="RSS"><i class="fas fa-rss"></i></a>
       </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer">
+      <i class="fas fa-exclamation-triangle" style="margin-right: 6px; color: #b0c4de;"></i>
+      Disclaimer: The information provided on this website is for general informational purposes only. 
+      All bank rankings, asset figures, and ratings are based on publicly available data and are subject to change. 
+      We do not guarantee the accuracy or completeness of this information. Always consult official sources for the latest data.
     </div>
   </footer>
 
