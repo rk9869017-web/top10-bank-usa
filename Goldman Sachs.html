@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Goldman Sachs · In-Depth Profile</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f4f7fc;
+            color: #1e2a3a;
+            line-height: 1.6;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0.5rem 0.8rem 0.5rem;
+            border-bottom: 2px solid #eef2f7;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(10, 37, 64, 0.15);
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo-text {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0a2540;
+            letter-spacing: -0.5px;
+        }
+        .logo-text span {
+            color: #1a73e8;
+        }
+
+        .header-tagline {
+            font-size: 0.85rem;
+            color: #4a5f7a;
+            background: #eef6ff;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-weight: 500;
+        }
+        .header-tagline i {
+            color: #1a73e8;
+            margin-right: 4px;
+        }
+
+        /* ===== BACK LINK ===== */
+        .back-link {
+            margin-bottom: 1.5rem;
+        }
+        .back-link a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+            color: #0a2540;
+        }
+
+        /* ===== PROFILE HERO ===== */
+        .profile-hero {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: #f9fcff;
+            border-radius: 28px;
+            padding: 2rem 2.5rem;
+            border: 1px solid #e2ecf7;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .profile-hero .bank-big-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(145deg, #122b44, #0a1e30);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.8rem;
+            box-shadow: 0 10px 20px rgba(10, 37, 64, 0.12);
+            flex-shrink: 0;
+        }
+
+        .profile-hero .hero-text h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #0a2540;
+            letter-spacing: -0.02em;
+        }
+        .profile-hero .hero-text h1 span {
+            color: #1a73e8;
+        }
+        .profile-hero .hero-text .ticker-large {
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: #5b6f87;
+            background: #eef2f7;
+            padding: 0.2rem 1.2rem;
+            border-radius: 40px;
+            margin-left: 0.8rem;
+        }
+        .profile-hero .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 0.4rem;
+            flex-wrap: wrap;
+        }
+        .profile-hero .hero-stats span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 1rem;
+            color: #2c405a;
+        }
+        .profile-hero .hero-stats i {
+            color: #1a73e8;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .profile-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .profile-content p {
+            font-size: 1.05rem;
+            color: #1e2f44;
+        }
+
+        .profile-content h2 {
+            font-size: 1.6rem;
+            color: #0a2540;
+            margin-top: 0.3rem;
+            margin-bottom: 0.2rem;
+            font-weight: 600;
+            border-bottom: 2px solid #eef2f7;
+            padding-bottom: 0.3rem;
+        }
+
+        .profile-content h2 i {
+            color: #1a73e8;
+            margin-right: 0.6rem;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            background: #f9fcff;
+            padding: 1.2rem 1.5rem;
+            border-radius: 20px;
+            border: 1px solid #e2ecf7;
+            margin: 0.5rem 0;
+        }
+        .stat-grid .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .stat-grid .stat-item .label {
+            font-size: 0.8rem;
+            color: #5b6f87;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .stat-grid .stat-item .value {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0a2540;
+        }
+
+        /* ===== FOOTER ===== */
+        .professional-footer {
+            margin-top: 1.5rem;
+            border-top: 2px solid #eef2f7;
+            padding-top: 1.8rem;
+            padding-bottom: 0.8rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.2rem;
+            color: #0a2540;
+            margin-bottom: 0.2rem;
+        }
+        .footer-brand h3 i {
+            color: #1a73e8;
+            margin-right: 6px;
+        }
+        .footer-brand p {
+            color: #4a5f7a;
+            font-size: 0.85rem;
+            max-width: 260px;
+        }
+
+        .footer-links h4 {
+            font-size: 0.95rem;
+            color: #0a2540;
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-links ul li {
+            margin-bottom: 0.4rem;
+        }
+        .footer-links ul li a {
+            color: #3e5a76;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .footer-links ul li a i {
+            color: #1a73e8;
+            font-size: 0.75rem;
+            width: 1rem;
+        }
+        .footer-links ul li a:hover {
+            color: #0a2540;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #e2eaf2;
+            padding-top: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            color: #5b6f87;
+        }
+
+        .disclaimer {
+            margin-top: 0.8rem;
+            font-size: 0.75rem;
+            color: #7a8fa0;
+            text-align: center;
+            border-top: 1px solid #eef2f7;
+            padding-top: 0.8rem;
+            width: 100%;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .container {
+                padding: 0 1rem 1rem 1rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.2rem;
+            }
+            .profile-hero {
+                padding: 1.5rem;
+            }
+            .profile-hero .hero-text h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 0 0.8rem 0.8rem 0.8rem;
+            }
+            .profile-hero {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.2rem;
+            }
+            .profile-hero .bank-big-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+            }
+            .profile-hero .hero-text h1 {
+                font-size: 1.8rem;
+            }
+            .profile-hero .hero-text .ticker-large {
+                font-size: 0.9rem;
+                padding: 0.1rem 0.8rem;
+                margin-left: 0;
+                display: inline-block;
+                margin-top: 0.2rem;
+            }
+            .profile-hero .hero-stats {
+                gap: 1rem;
+            }
+            .profile-content p {
+                font-size: 0.95rem;
+            }
+            .stat-grid {
+                grid-template-columns: 1fr 1fr;
+                padding: 1rem;
+            }
+            .site-header {
+                padding: 0.8rem 0.2rem 0.6rem 0.2rem;
+            }
+            .logo-text {
+                font-size: 1.3rem;
+            }
+            .header-tagline {
+                font-size: 0.7rem;
+                padding: 0.2rem 0.7rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profile-hero .hero-stats {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            .stat-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <header class="site-header">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <img src="https://top10-bank-usa.rk9869017.workers.dev/logo1.jpg" alt="Southwindtech Logo">
+                </div>
+                <div class="logo-text">South<span>wind</span>tech</div>
+            </div>
+            <div class="header-tagline">
+                <i class="fas fa-flag-usa"></i> Top 10 Guide by <strong>Southwindtech</strong>
+            </div>
+        </header>
+
+        <!-- ===== BACK LINK to Homepage ===== -->
+        <div class="back-link">
+            <a href="https://top10-bank-usa.rk9869017.workers.dev/"><i class="fas fa-arrow-left"></i> Back to Top 10 Banks</a>
+        </div>
+
+        <!-- ===== PROFILE HERO ===== -->
+        <div class="profile-hero">
+            <div class="bank-big-icon"><i class="fas fa-chart-pie"></i></div>
+            <div class="hero-text">
+                <h1>Goldman Sachs <span class="ticker-large">GS</span></h1>
+                <div class="hero-stats">
+                    <span><i class="fas fa-dollar-sign"></i> $1.6T assets</span>
+                    <span><i class="fas fa-globe-americas"></i> New York City</span>
+                    <span><i class="fas fa-users"></i> 45k+ employees</span>
+                    <span><i class="fas fa-star"></i> A+ rating</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== MAIN CONTENT (800+ words) ===== -->
+        <div class="profile-content">
+
+            <h2><i class="fas fa-flag-usa"></i> Overview</h2>
+            <p><strong>The Goldman Sachs Group, Inc.</strong> is a leading global investment banking, securities, and investment management firm. Founded in 1869 and headquartered in New York City, Goldman Sachs is one of the most prestigious and influential financial institutions in the world. With over <strong>$1.6 trillion in assets</strong> under management, the firm serves corporations, governments, and high-net-worth individuals with a comprehensive range of financial services, including mergers and acquisitions (M&amp;A) advisory, capital markets, asset management, and private equity.</p>
+
+            <p>Goldman Sachs is renowned for its culture of excellence, innovation, and client service. The firm has a storied history of advising on some of the largest and most complex transactions in history, including the privatization of state-owned enterprises, the largest initial public offerings (IPOs), and groundbreaking mergers. Its reputation as a "gold standard" in investment banking is underpinned by its deep expertise, global reach, and commitment to integrity.</p>
+
+            <div class="stat-grid">
+                <div class="stat-item"><span class="label">Total Assets</span><span class="value">$1.6T</span></div>
+                <div class="stat-item"><span class="label">Market Cap</span><span class="value">~$150B</span></div>
+                <div class="stat-item"><span class="label">Employees</span><span class="value">45,000+</span></div>
+                <div class="stat-item"><span class="label">Credit Rating</span><span class="value">A+</span></div>
+            </div>
+
+            <h2><i class="fas fa-chart-line"></i> Business &amp; Operations</h2>
+            <p>Goldman Sachs operates through four primary business segments: <strong>Investment Banking</strong>, <strong>Global Markets</strong>, <strong>Asset Management</strong>, and <strong>Consumer &amp; Wealth Management</strong>. The Investment Banking division is the firm's flagship, providing advisory services for M&amp;A, restructuring, and capital raising. Goldman Sachs consistently ranks among the top global advisors, with a dominant presence in technology, healthcare, and financial services sectors.</p>
+
+            <p>The <strong>Global Markets</strong> division is a powerhouse in sales and trading, offering clients access to fixed income, currencies, commodities, and equities markets. The firm is a leading market maker, providing liquidity and risk management solutions to institutional clients worldwide. Its research team is among the most respected on Wall Street, providing actionable insights to investors and corporations.</p>
+
+            <p>The <strong>Asset Management</strong> division manages over $2 trillion in assets across public and private markets, including equities, fixed income, real estate, and alternative investments. Goldman Sachs is a leader in sustainable investing, with a commitment to integrate ESG factors into its investment process. The <strong>Consumer &amp; Wealth Management</strong> division, which includes the Marcus brand and private wealth advisory, serves individuals and families with tailored financial planning, lending, and investment solutions.</p>
+
+            <h2><i class="fas fa-shield-alt"></i> Safety, Regulation &amp; Trust</h2>
+            <p>As a <strong>systemically important financial institution (SIFI)</strong>, Goldman Sachs is subject to rigorous oversight from the Federal Reserve, SEC, and other global regulators. The firm maintains a strong capital position, with a Common Equity Tier 1 (CET1) ratio of over 12%, significantly above regulatory minimums. This capital strength enables Goldman Sachs to navigate market volatility and continue serving its clients during economic downturns.</p>
+
+            <p>Goldman Sachs has also been a leader in corporate governance and risk management. The firm has implemented robust compliance systems, enhanced its risk oversight framework, and committed to transparency in its operations. Its reputation for integrity and ethical conduct has earned it the trust of clients and investors worldwide.</p>
+
+            <p>Community engagement is a cornerstone of Goldman Sachs' mission. The firm invests over <strong>$200 million annually</strong> in community development, supporting small businesses, entrepreneurship, and financial literacy programs. Goldman Sachs' "10,000 Small Businesses" initiative has provided education and capital to thousands of entrepreneurs across the United States, fostering economic growth and job creation.</p>
+
+            <h2><i class="fas fa-rocket"></i> Innovation &amp; Future Outlook</h2>
+            <p>Goldman Sachs is at the forefront of financial technology innovation. The firm has invested heavily in digital platforms, including Marcus, its online lending and savings platform, and has developed advanced analytics and artificial intelligence tools for investment research and trading. Goldman Sachs is also a leader in blockchain and distributed ledger technology, exploring applications in securities settlement and trade finance.</p>
+
+            <p>The firm is also a leader in sustainable finance, with a commitment to facilitate <strong>$750 billion in sustainable finance</strong> by 2030. This includes financing for renewable energy projects, green bonds, and social impact initiatives. Goldman Sachs has set ambitious net-zero emissions targets for its operations and financed emissions, aligning with global climate goals.</p>
+
+            <p>Looking ahead, Goldman Sachs is focused on expanding its digital-first strategy while maintaining its strong advisory and market-making capabilities. The firm plans to continue its growth in asset management and wealth management, leveraging its global expertise and client relationships. Additionally, Goldman Sachs is investing in AI and machine learning to enhance risk management and client service, positioning itself for continued leadership in the evolving financial landscape.</p>
+
+            <p>With a diversified business model, a strong capital base, and a commitment to innovation and sustainability, Goldman Sachs remains a pillar of global banking. Its ability to adapt to changing market conditions and client needs while maintaining its culture of excellence has made it a trusted partner for the world's most sophisticated investors and corporations.</p>
+
+            <p style="margin-top: 1rem; font-size: 0.95rem; color: #2a4a6a; border-top: 1px solid #deeaf5; padding-top: 0.8rem;">
+                <i class="fas fa-info-circle" style="color: #1a73e8;"></i> This profile is for informational purposes. Data is based on Q2 2026 reports and public disclosures. Always consult official sources for the latest information.
+            </p>
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="professional-footer">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3><i class="fas fa-building-columns"></i> Southwindtech</h3>
+                    <p>Your trusted guide to America's leading financial institutions. Data-driven, transparent, and professional.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="https://top10-bank-usa.rk9869017.workers.dev/"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-file-contract"></i> Terms &amp; Conditions</a></li>
+                        <li><a href="#"><i class="fas fa-lock"></i> Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Southwindtech. All rights reserved.</span>
+            </div>
+
+            <div class="disclaimer">
+                <i class="fas fa-exclamation-triangle" style="margin-right: 6px; color: #b0c4de;"></i>
+                Disclaimer: The information provided on this website is for general informational purposes only. 
+                All bank rankings, asset figures, and ratings are based on publicly available data and are subject to change. 
+                We do not guarantee the accuracy or completeness of this information. Always consult official sources for the latest data.
+            </div>
+        </footer>
+
+    </div>
+    <!-- end container -->
+</body>
+</html>
