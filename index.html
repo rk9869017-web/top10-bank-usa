@@ -415,7 +415,10 @@
       width: 100%;
     }
 
+    /* ============================================================ */
     /* ===== RESPONSIVE ===== */
+    /* ============================================================ */
+
     @media (max-width: 1024px) {
       .container {
         padding: 0 1.2rem 0 1.2rem;
@@ -562,18 +565,25 @@
         align-self: flex-start;
       }
 
+      /* ===== MOBILE RESPONSIVE FOOTER ===== */
       .professional-footer {
         padding-top: 1.2rem;
         margin-top: 1rem;
       }
       .footer-grid {
         grid-template-columns: 1fr;
-        gap: 0.8rem;
+        gap: 1rem;
+        text-align: center;
+      }
+      .footer-brand {
         text-align: center;
       }
       .footer-brand p {
         max-width: 100%;
-        margin: 0 auto;
+        margin: 0.2rem auto;
+      }
+      .footer-links {
+        text-align: center;
       }
       .footer-links ul {
         display: flex;
@@ -587,6 +597,7 @@
         flex-direction: column;
         text-align: center;
         gap: 0.3rem;
+        justify-content: center;
       }
       .disclaimer {
         font-size: 0.65rem;
@@ -661,6 +672,7 @@
         padding: 0.05rem 0.5rem;
       }
 
+      /* Footer mobile */
       .footer-brand h3 {
         font-size: 1rem;
       }
@@ -668,13 +680,20 @@
         font-size: 0.75rem;
       }
       .footer-links h4 {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
+        margin-bottom: 0.4rem;
       }
       .footer-links ul li a {
         font-size: 0.75rem;
       }
+      .footer-links ul li {
+        margin-bottom: 0.3rem;
+      }
       .footer-bottom {
         font-size: 0.7rem;
+      }
+      .footer-grid {
+        gap: 0.8rem;
       }
       .disclaimer {
         font-size: 0.6rem;
