@@ -24,20 +24,19 @@
       flex-direction: column;
     }
 
-    /* full-width container with minimal side padding */
     .container {
       max-width: 1400px;
       margin: 0 auto;
       background: #ffffff;
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
-      padding: 0 1.5rem 1.5rem 1.5rem;
+      padding: 0 1.5rem 0 1.5rem;
       flex: 1;
       display: flex;
       flex-direction: column;
       width: 100%;
     }
 
-    /* ===== HEADER with logo ===== */
+    /* ===== HEADER ===== */
     .site-header {
       display: flex;
       justify-content: space-between;
@@ -93,7 +92,7 @@
       margin-right: 4px;
     }
 
-    /* ---- INTRO SECTION (expanded) ---- */
+    /* ---- INTRO SECTION ---- */
     .intro-section {
       text-align: center;
       padding: 1rem 0.5rem 2rem 0.5rem;
@@ -150,7 +149,6 @@
       margin-right: 0.4rem;
     }
 
-    /* expanded intro text */
     .intro-expanded {
       max-width: 940px;
       margin: 1.5rem auto 0.5rem auto;
@@ -197,7 +195,7 @@
       margin-right: 6px;
     }
 
-    /* ---- TOP 10 BANK GRID ---- */
+    /* ---- BANK GRID ---- */
     .bank-grid {
       display: flex;
       flex-direction: column;
@@ -221,6 +219,13 @@
       border-color: #cbd5e1;
       box-shadow: 0 12px 24px -8px rgba(0, 30, 60, 0.08);
       transform: scale(1.003);
+    }
+
+    /* Make the whole card clickable */
+    .bank-card a {
+      display: contents;
+      text-decoration: none;
+      color: inherit;
     }
 
     .bank-rank {
@@ -311,12 +316,13 @@
       margin-left: 0.3rem;
     }
 
-    /* ----- PROFESSIONAL FOOTER ----- */
+    /* ===== FOOTER - FIXED ALIGNMENT ===== */
     .professional-footer {
       margin-top: 1.5rem;
       border-top: 2px solid #eef2f7;
       padding-top: 1.8rem;
       padding-bottom: 0.8rem;
+      width: 100%;
     }
 
     .footer-grid {
@@ -402,10 +408,10 @@
       color: #1a73e8;
     }
 
-    /* responsive */
+    /* ===== RESPONSIVE ===== */
     @media (max-width: 900px) {
       .container {
-        padding: 0 1rem 1rem 1rem;
+        padding: 0 1rem 0 1rem;
       }
       .footer-grid {
         grid-template-columns: 1fr 1fr;
@@ -415,7 +421,7 @@
 
     @media (max-width: 700px) {
       .container {
-        padding: 0 0.8rem 0.8rem 0.8rem;
+        padding: 0 0.8rem 0 0.8rem;
       }
       .intro-section h1 {
         font-size: 2rem;
@@ -494,7 +500,7 @@
 
 <div class="container">
 
-  <!-- ===== HEADER with logo ===== -->
+  <!-- ===== HEADER ===== -->
   <header class="site-header">
     <div class="logo-area">
       <div class="logo-icon"><i class="fas fa-building-columns"></i></div>
@@ -505,7 +511,7 @@
     </div>
   </header>
 
-  <!-- INTRODUCTION SECTION (expanded) -->
+  <!-- ===== INTRO SECTION ===== -->
   <div class="intro-section">
     <div class="badge"><i class="fas fa-university" style="margin-right: 8px;"></i> 2026 ranking</div>
     <h1><i class="fas fa-building-columns"></i> Top 10 Banks in USA</h1>
@@ -517,7 +523,6 @@
       <i class="fas fa-chart-line"></i> Assets, reputation &amp; reach · Updated 2026
     </div>
 
-    <!-- EXPANDED INTRO (~800 words) -->
     <div class="intro-expanded">
       <p><i class="fas fa-flag-usa"></i> <strong>The American banking system</strong> is the backbone of the global financial architecture. With total assets exceeding $24 trillion, U.S. banks serve over 300 million consumers and millions of businesses worldwide. The institutions listed here represent the pinnacle of stability, innovation, and service — from retail banking to investment management, wealth advisory, and cutting-edge fintech integration.</p>
 
@@ -545,24 +550,27 @@
     </div>
   </div>
 
-  <!-- TOP 10 BANK LIST -->
+  <!-- ===== BANK GRID ===== -->
   <div class="bank-grid">
-    <!-- 1. JPMorgan Chase -->
+    <!-- 1. JPMorgan Chase (with link) -->
     <div class="bank-card">
-      <div class="bank-rank">#1</div>
-      <div class="bank-icon"><i class="fas fa-building-columns"></i></div>
-      <div class="bank-info">
-        <div class="bank-name">
-          JPMorgan Chase <span class="ticker">JPM</span>
-          <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $3.9T</span>
+      <a href="https://top10-bank-usa.rk9869017.workers.dev/JPMorgan%20Chase" target="_blank">
+        <div class="bank-rank">#1</div>
+        <div class="bank-icon"><i class="fas fa-building-columns"></i></div>
+        <div class="bank-info">
+          <div class="bank-name">
+            JPMorgan Chase <span class="ticker">JPM</span>
+            <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $3.9T</span>
+          </div>
+          <div class="bank-desc">
+            <span><i class="fas fa-globe-americas"></i> Global · NYC</span>
+            <span><i class="fas fa-users"></i> 300k+ employees</span>
+            <span><i class="fas fa-star"></i> AAA rating</span>
+          </div>
         </div>
-        <div class="bank-desc">
-          <span><i class="fas fa-globe-americas"></i> Global · NYC</span>
-          <span><i class="fas fa-users"></i> 300k+ employees</span>
-          <span><i class="fas fa-star"></i> AAA rating</span>
-        </div>
-      </div>
+      </a>
     </div>
+
     <!-- 2. Bank of America -->
     <div class="bank-card">
       <div class="bank-rank">#2</div>
@@ -579,6 +587,7 @@
         </div>
       </div>
     </div>
+
     <!-- 3. Wells Fargo -->
     <div class="bank-card">
       <div class="bank-rank">#3</div>
@@ -595,6 +604,7 @@
         </div>
       </div>
     </div>
+
     <!-- 4. Citigroup -->
     <div class="bank-card">
       <div class="bank-rank">#4</div>
@@ -611,6 +621,7 @@
         </div>
       </div>
     </div>
+
     <!-- 5. Goldman Sachs -->
     <div class="bank-card">
       <div class="bank-rank">#5</div>
@@ -627,6 +638,7 @@
         </div>
       </div>
     </div>
+
     <!-- 6. Morgan Stanley -->
     <div class="bank-card">
       <div class="bank-rank">#6</div>
@@ -643,6 +655,7 @@
         </div>
       </div>
     </div>
+
     <!-- 7. U.S. Bancorp -->
     <div class="bank-card">
       <div class="bank-rank">#7</div>
@@ -659,6 +672,7 @@
         </div>
       </div>
     </div>
+
     <!-- 8. PNC Financial Services -->
     <div class="bank-card">
       <div class="bank-rank">#8</div>
@@ -675,6 +689,7 @@
         </div>
       </div>
     </div>
+
     <!-- 9. Truist Financial -->
     <div class="bank-card">
       <div class="bank-rank">#9</div>
@@ -691,6 +706,7 @@
         </div>
       </div>
     </div>
+
     <!-- 10. Capital One -->
     <div class="bank-card">
       <div class="bank-rank">#10</div>
@@ -709,7 +725,7 @@
     </div>
   </div>
 
-  <!-- ===== PROFESSIONAL FOOTER ===== -->
+  <!-- ===== FOOTER (Fixed Alignment) ===== -->
   <footer class="professional-footer">
     <div class="footer-grid">
       <div class="footer-brand">
@@ -732,11 +748,22 @@
         </ul>
       </div>
       <div class="footer-links">
-        
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#"><i class="fas fa-newspaper"></i> Blog</a></li>
+          <li><a href="#"><i class="fas fa-chart-simple"></i> Market Data</a></li>
+        </ul>
+      </div>
+    </div>
 
     <div class="footer-bottom">
       <span>© 2026 Top10Banks. All rights reserved.</span>
-    
+      <div class="social-icons">
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="RSS"><i class="fas fa-rss"></i></a>
+      </div>
     </div>
   </footer>
 
