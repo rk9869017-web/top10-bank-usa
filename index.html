@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top 10 Banks in USA | Professional Intro</title>
+  <!-- Font Awesome for icons (professional look) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f4f7fc;
+      color: #1e2a3a;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 32px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      padding: 2.5rem 2rem;
+    }
+
+    /* ---- INTRO SECTION (professional hero) ---- */
+    .intro-section {
+      text-align: center;
+      padding: 1.5rem 0.5rem 2.5rem 0.5rem;
+      border-bottom: 2px solid #eef2f7;
+      margin-bottom: 2.5rem;
+    }
+
+    .intro-section .badge {
+      display: inline-block;
+      background: #0a2540;
+      color: white;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .intro-section h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #0a2540;
+      margin-bottom: 0.75rem;
+    }
+
+    .intro-section h1 i {
+      color: #1a73e8;
+      margin-right: 0.5rem;
+    }
+
+    .intro-section .subhead {
+      font-size: 1.25rem;
+      color: #425466;
+      max-width: 720px;
+      margin: 0 auto 0.5rem auto;
+      font-weight: 400;
+    }
+
+    .intro-section .highlight {
+      background: #eef6ff;
+      display: inline-block;
+      padding: 0.3rem 1.2rem;
+      border-radius: 40px;
+      color: #1a5bbf;
+      font-weight: 500;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .intro-section .highlight i {
+      margin-right: 0.4rem;
+    }
+
+    /* ---- TOP 10 BANK GRID ---- */
+    .bank-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .bank-card {
+      display: flex;
+      align-items: center;
+      background: #fafbff;
+      border-radius: 20px;
+      padding: 1.25rem 1.8rem;
+      transition: all 0.2s ease;
+      border: 1px solid #e9edf4;
+      box-shadow: 0 4px 8px rgba(0, 20, 40, 0.02);
+    }
+
+    .bank-card:hover {
+      background: #ffffff;
+      border-color: #cbd5e1;
+      box-shadow: 0 12px 24px -8px rgba(0, 30, 60, 0.08);
+      transform: scale(1.005);
+    }
+
+    .bank-rank {
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #b0c4de;
+      min-width: 3.5rem;
+      text-align: center;
+      letter-spacing: -0.02em;
+      font-feature-settings: "tnum";
+    }
+
+    .bank-icon {
+      width: 60px;
+      height: 60px;
+      background: #0a2540;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.8rem;
+      margin: 0 1.2rem 0 0.5rem;
+      flex-shrink: 0;
+      background: linear-gradient(145deg, #122b44, #0a1e30);
+      box-shadow: 0 6px 12px rgba(10, 37, 64, 0.08);
+    }
+
+    .bank-icon i {
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
+
+    .bank-info {
+      flex: 1;
+    }
+
+    .bank-name {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #0a2540;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .bank-name .ticker {
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: #5b6f87;
+      background: #eef2f7;
+      padding: 0.1rem 0.8rem;
+      border-radius: 30px;
+      letter-spacing: 0.3px;
+    }
+
+    .bank-desc {
+      color: #2c405a;
+      font-size: 0.95rem;
+      margin-top: 0.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+    }
+
+    .bank-desc span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      color: #3e5a76;
+    }
+
+    .bank-desc i {
+      color: #1a73e8;
+      width: 1.1rem;
+      font-size: 0.9rem;
+    }
+
+    .bank-assets {
+      font-weight: 500;
+      color: #0a2540;
+      background: #e9f0fa;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      margin-left: 0.5rem;
+    }
+
+    /* small screens */
+    @media (max-width: 700px) {
+      .container {
+        padding: 1.5rem 1rem;
+      }
+      .intro-section h1 {
+        font-size: 2.2rem;
+      }
+      .bank-card {
+        flex-wrap: wrap;
+        padding: 1rem;
+      }
+      .bank-rank {
+        min-width: 2.5rem;
+        font-size: 1.4rem;
+      }
+      .bank-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.4rem;
+        margin-right: 0.8rem;
+      }
+      .bank-name {
+        font-size: 1.2rem;
+      }
+      .bank-desc {
+        font-size: 0.85rem;
+        flex-direction: column;
+        gap: 0.2rem;
+        margin-top: 0.4rem;
+      }
+      .bank-assets {
+        margin-left: 0;
+        align-self: flex-start;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .bank-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+      }
+      .bank-rank {
+        align-self: flex-start;
+      }
+      .bank-icon {
+        margin: 0.2rem 0 0.2rem 0;
+      }
+    }
+
+    /* footer / credit */
+    .footer-note {
+      margin-top: 3.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6b7f99;
+      border-top: 1px solid #e2eaf2;
+      padding-top: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-note i {
+      color: #1a73e8;
+    }
+
+    .footer-note a {
+      color: #0a2540;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted transparent;
+      transition: 0.2s;
+    }
+
+    .footer-note a:hover {
+      border-bottom-color: #1a73e8;
+      color: #1a5bbf;
+    }
+
+    /* additional professional touch */
+    .separator-dot {
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      background: #b8cae0;
+      border-radius: 50%;
+      margin: 0 0.4rem;
+    }
+
+    .badge-small {
+      background: #eaf1fd;
+      padding: 0.1rem 0.9rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #1a5bbf;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- INTRODUCTION SECTION -->
+  <div class="intro-section">
+    <div class="badge"><i class="fas fa-university" style="margin-right: 8px;"></i> 2026 ranking</div>
+    <h1><i class="fas fa-building-columns"></i> Top 10 Banks in USA</h1>
+    <p class="subhead">
+      <strong>Industry leaders</strong> — trusted by millions, driving the American economy.
+      From Wall Street to Main Street, these institutions define modern banking.
+    </p>
+    <div class="highlight">
+      <i class="fas fa-chart-line"></i> Assets, reputation &amp; reach · Updated 2026
+    </div>
+  </div>
+
+  <!-- TOP 10 BANK LIST -->
+  <div class="bank-grid">
+
+    <!-- 1. JPMorgan Chase -->
+    <div class="bank-card">
+      <div class="bank-rank">#1</div>
+      <div class="bank-icon"><i class="fas fa-building-columns"></i></div>
+      <div class="bank-info">
+        <div class="bank-name">
+          JPMorgan Chase <span class="ticker">JPM</span>
+          <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $3.9T</span>
+        </div>
+        <div class="bank-desc">
+          <span><i class="fas fa-globe-americas"></i> Global · NYC</span>
+          <span><i class="fas fa-users"></i> 300k+ employees</span>
+          <span><i class="fas fa-star"></i> AAA rating</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Bank of America -->
+    <div class="bank-card">
+      <div class="bank-rank">#2</div>
+      <div class="bank-icon"><i class="fas fa-landmark"></i></div>
+      <div class="bank-info">
+        <div class="bank-name">
+          Bank of America <span class="ticker">BAC</span>
+          <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $3.2T</span>
+        </div>
+        <div class="bank-desc">
+          <span><i class="fas fa-globe-americas"></i> Charlotte, NC</span>
+          <span><i class="fas fa-users"></i> 210k+ employees</span>
+          <span><i class="fas fa-star"></i> AA- rating</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Wells Fargo -->
+    <div class="bank-card">
+      <div class="bank-rank">#3</div>
+      <div class="bank-icon"><i class="fas fa-archway"></i></div>
+      <div class="bank-info">
+        <div class="bank-name">
+          Wells Fargo <span class="ticker">WFC</span>
+          <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $1.9T</span>
+        </div>
+        <div class="bank-desc">
+          <span><i class="fas fa-globe-americas"></i> San Francisco, CA</span>
+          <span><i class="fas fa-users"></i> 230k+ employees</span>
+          <span><i class="fas fa-star"></i> A+ rating</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Citigroup -->
+    <div class="bank-card">
+      <div class="bank-rank">#4</div>
+      <div class="bank-icon"><i class="fas fa-city"></i></div>
+      <div class="bank-info">
+        <div class="bank-name">
+          Citigroup <span class="ticker">C</span>
+          <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $2.4T</span>
+        </div>
+        <div class="bank-desc">
+          <span><i class="fas fa-globe-americas"></i> NYC</span>
+          <span><i class="fas fa-users"></i> 240k+ employees</span>
+          <span><i class="fas fa-star"></i> A rating</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Goldman Sachs -->
+    <div class="bank-card">
+      <div class="bank-rank">#5</div>
+      <div class="bank-icon"><i class="fas fa-chart-pie"></i></div>
+      <div class="bank-info">
+        <div class="bank-name">
+          Goldman Sachs <span class="ticker">GS</span>
+          <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $1.6T</span>
+        </div>
+        <div class="bank-desc">
+          <span><i class="fas fa-globe-americas"></i> NYC</span>
+          <span><i class="fas fa-users"></i> 45k+ employees</span>
+          <span><i class="fas fa-star"></i> A+ rating</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Morgan Stanley -->
+    <div class="bank-card">
+      <div class="bank-rank">#6</div>
+      <div class="bank-icon"><i class="fas fa-arrow-trend-up"></i></div>
+      <div class="bank-info">
+        <div class="bank-name">
+          Morgan Stanley <span class="ticker">MS</span>
+          <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $1.2T</span>
+        </div>
+        <div class="bank-desc">
+          <span><i class="fas fa-globe-americas"></i> NYC</span>
+          <span><i class="fas fa-users"></i> 80k+ employees</span>
+          <span><i class="fas fa-star"></i> A+ rating</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. U.S. Bancorp -->
+    <div class="bank-card">
+      <div class="bank-rank">#7</div>
+      <div class="bank-icon"><i class="fas fa-flag-usa"></i></div>
+      <div class="bank-info">
+        <div class="bank-name">
+          U.S. Bancorp <span class="ticker">USB</span>
+          <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $680B</span>
+        </div>
+        <div class="bank-desc">
+          <span><i class="fas fa-globe-americas"></i> Minneapolis, MN</span>
+          <span><i class="fas fa-users"></i> 70k+ employees</span>
+          <span><i class="fas fa-star"></i> A+ rating</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. PNC Financial Services -->
+    <div class="bank-card">
+      <div class="bank-rank">#8</div>
+      <div class="bank-icon"><i class="fas fa-piggy-bank"></i></div>
+      <div class="bank-info">
+        <div class="bank-name">
+          PNC Financial <span class="ticker">PNC</span>
+          <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $560B</span>
+        </div>
+        <div class="bank-desc">
+          <span><i class="fas fa-globe-americas"></i> Pittsburgh, PA</span>
+          <span><i class="fas fa-users"></i> 60k+ employees</span>
+          <span><i class="fas fa-star"></i> A rating</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. Truist Financial -->
+    <div class="bank-card">
+      <div class="bank-rank">#9</div>
+      <div class="bank-icon"><i class="fas fa-handshake"></i></div>
+      <div class="bank-info">
+        <div class="bank-name">
+          Truist Financial <span class="ticker">TFC</span>
+          <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $535B</span>
+        </div>
+        <div class="bank-desc">
+          <span><i class="fas fa-globe-americas"></i> Charlotte, NC</span>
+          <span><i class="fas fa-users"></i> 50k+ employees</span>
+          <span><i class="fas fa-star"></i> A- rating</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10. Capital One -->
+    <div class="bank-card">
+      <div class="bank-rank">#10</div>
+      <div class="bank-icon"><i class="fas fa-credit-card"></i></div>
+      <div class="bank-info">
+        <div class="bank-name">
+          Capital One <span class="ticker">COF</span>
+          <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $480B</span>
+        </div>
+        <div class="bank-desc">
+          <span><i class="fas fa-globe-americas"></i> McLean, VA</span>
+          <span><i class="fas fa-users"></i> 55k+ employees</span>
+          <span><i class="fas fa-star"></i> A- rating</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER / PROFESSIONAL CLOSING -->
+  <div class="footer-note">
+    <span><i class="fas fa-database"></i> Data based on 2026 Federal Reserve &amp; market reports</span>
+    <span class="separator-dot"></span>
+    <span><i class="fas fa-shield-alt"></i> Trusted institutions · FDIC insured</span>
+    <span class="separator-dot"></span>
+    <span><i class="fas fa-code"></i> Designed with <i class="fas fa-heart" style="color: #d44c4c;"></i> for clarity</span>
+  </div>
+
+</div>
+<!-- end container -->
+</body>
+</html>
