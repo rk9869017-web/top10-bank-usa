@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy · Top 10 Banks in USA</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f4f7fc;
+      color: #1e2a3a;
+      line-height: 1.6;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+      padding: 0 1.5rem 1.5rem 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0.5rem 0.8rem 0.5rem;
+      border-bottom: 2px solid #eef2f7;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 4px 10px rgba(10, 37, 64, 0.15);
+    }
+
+    .logo-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .logo-text {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #0a2540;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-text span {
+      color: #1a73e8;
+    }
+
+    .header-tagline {
+      font-size: 0.85rem;
+      color: #4a5f7a;
+      background: #eef6ff;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-weight: 500;
+    }
+
+    .header-tagline i {
+      color: #1a73e8;
+      margin-right: 4px;
+    }
+
+    /* ===== BACK LINK ===== */
+    .back-link {
+      margin-bottom: 1.5rem;
+    }
+    .back-link a {
+      color: #1a73e8;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      transition: 0.2s;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+      color: #0a2540;
+    }
+
+    /* ===== PAGE CONTENT ===== */
+    .page-hero {
+      text-align: center;
+      padding: 1.5rem 0.5rem 1.5rem 0.5rem;
+      border-bottom: 2px solid #eef2f7;
+      margin-bottom: 2rem;
+    }
+
+    .page-hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #0a2540;
+      margin-bottom: 0.3rem;
+    }
+
+    .page-hero h1 i {
+      color: #1a73e8;
+      margin-right: 0.5rem;
+    }
+
+    .page-hero .subhead {
+      font-size: 1.1rem;
+      color: #425466;
+      max-width: 780px;
+      margin: 0 auto;
+      font-weight: 400;
+    }
+
+    .privacy-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .privacy-content h2 {
+      font-size: 1.5rem;
+      color: #0a2540;
+      margin-top: 0.2rem;
+      font-weight: 600;
+      border-bottom: 2px solid #eef2f7;
+      padding-bottom: 0.4rem;
+    }
+
+    .privacy-content h2 i {
+      color: #1a73e8;
+      margin-right: 0.6rem;
+    }
+
+    .privacy-content p {
+      font-size: 1rem;
+      color: #1e2f44;
+      margin-bottom: 0.5rem;
+    }
+
+    .privacy-content ul {
+      list-style: none;
+      padding-left: 0.5rem;
+    }
+
+    .privacy-content ul li {
+      padding: 0.3rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 1rem;
+      color: #1e2f44;
+    }
+
+    .privacy-content ul li i {
+      color: #1a73e8;
+      margin-top: 0.2rem;
+      width: 1.2rem;
+    }
+
+    .privacy-content .highlight-box {
+      background: #f9fcff;
+      padding: 1.2rem 1.5rem;
+      border-radius: 16px;
+      border: 1px solid #e2ecf7;
+      margin: 0.5rem 0;
+    }
+
+    .privacy-content .highlight-box p {
+      margin-bottom: 0.3rem;
+      font-size: 0.95rem;
+    }
+
+    .last-updated {
+      font-size: 0.85rem;
+      color: #7a8fa0;
+      text-align: center;
+      padding: 0.8rem 0 0.5rem 0;
+      border-top: 1px solid #e2eaf2;
+      margin-top: 0.5rem;
+    }
+
+    /* ===== FOOTER ===== */
+    .professional-footer {
+      margin-top: 1.5rem;
+      border-top: 2px solid #eef2f7;
+      padding-top: 1.8rem;
+      padding-bottom: 0.8rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-brand h3 {
+      font-size: 1.2rem;
+      color: #0a2540;
+      margin-bottom: 0.2rem;
+    }
+    .footer-brand h3 i {
+      color: #1a73e8;
+      margin-right: 6px;
+    }
+    .footer-brand p {
+      color: #4a5f7a;
+      font-size: 0.85rem;
+      max-width: 260px;
+    }
+
+    .footer-links h4 {
+      font-size: 0.95rem;
+      color: #0a2540;
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-links ul li {
+      margin-bottom: 0.4rem;
+    }
+    .footer-links ul li a {
+      color: #3e5a76;
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .footer-links ul li a i {
+      color: #1a73e8;
+      font-size: 0.75rem;
+      width: 1rem;
+    }
+    .footer-links ul li a:hover {
+      color: #0a2540;
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #e2eaf2;
+      padding-top: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: #5b6f87;
+    }
+
+    .footer-bottom .social-icons {
+      display: none;
+    }
+
+    .disclaimer {
+      margin-top: 0.8rem;
+      font-size: 0.75rem;
+      color: #7a8fa0;
+      text-align: center;
+      border-top: 1px solid #eef2f7;
+      padding-top: 0.8rem;
+      width: 100%;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .container {
+        padding: 0 1rem 1rem 1rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+      }
+      .page-hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        padding: 0 0.8rem 0.8rem 0.8rem;
+      }
+      .page-hero {
+        padding: 1rem 0.2rem 1.2rem 0.2rem;
+      }
+      .page-hero h1 {
+        font-size: 1.8rem;
+      }
+      .page-hero .subhead {
+        font-size: 1rem;
+      }
+      .site-header {
+        padding: 0.8rem 0.2rem 0.6rem 0.2rem;
+      }
+      .logo-text {
+        font-size: 1.3rem;
+      }
+      .header-tagline {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.7rem;
+      }
+      .privacy-content h2 {
+        font-size: 1.3rem;
+      }
+      .privacy-content p {
+        font-size: 0.95rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+        text-align: center;
+      }
+      .footer-brand p {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .footer-links ul li a {
+        justify-content: center;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 0.5rem 0.5rem 0.5rem;
+      }
+      .page-hero h1 {
+        font-size: 1.5rem;
+      }
+      .logo-text {
+        font-size: 1rem;
+      }
+      .logo-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+        border-radius: 10px;
+      }
+      .header-tagline {
+        font-size: 0.55rem;
+        padding: 0.15rem 0.5rem;
+      }
+      .privacy-content h2 {
+        font-size: 1.1rem;
+      }
+      .footer-brand h3 {
+        font-size: 1rem;
+      }
+      .footer-brand p {
+        font-size: 0.75rem;
+      }
+      .footer-links h4 {
+        font-size: 0.8rem;
+      }
+      .footer-links ul li a {
+        font-size: 0.75rem;
+      }
+      .footer-bottom {
+        font-size: 0.7rem;
+      }
+      .disclaimer {
+        font-size: 0.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="logo-area">
+      <div class="logo-icon">
+        <img src="https://top10-bank-usa.rk9869017.workers.dev/logo1.jpg" alt="Southwindtech Logo">
+      </div>
+      <div class="logo-text">Top<span>10</span>Banks</div>
+    </div>
+    <div class="header-tagline">
+      <i class="fas fa-flag-usa"></i> Top 10 Guide by <strong>Southwindtech</strong>
+    </div>
+  </header>
+
+  <!-- ===== BACK LINK ===== -->
+  <div class="back-link">
+    <a href="https://top10-bank-usa.rk9869017.workers.dev/"><i class="fas fa-arrow-left"></i> Back to Home</a>
+  </div>
+
+  <!-- ===== PAGE HERO ===== -->
+  <div class="page-hero">
+    <h1><i class="fas fa-lock"></i> Privacy Policy</h1>
+    <p class="subhead">
+      Your privacy is important to us. This policy explains how we collect, use, and protect your personal information when you visit our website.
+    </p>
+  </div>
+
+  <!-- ===== PRIVACY CONTENT ===== -->
+  <div class="privacy-content">
+
+    <div>
+      <h2><i class="fas fa-info-circle"></i> Information We Collect</h2>
+      <p>We collect information from you in the following ways:</p>
+      <ul>
+        <li><i class="fas fa-regular fa-circle-check"></i> <strong>Personal Information:</strong> When you voluntarily provide it to us, such as when you fill out a contact form, subscribe to our newsletter, or send us an email. This may include your name, email address, and any other details you choose to share.</li>
+        <li><i class="fas fa-regular fa-circle-check"></i> <strong>Automatically Collected Information:</strong> When you visit our Site, we automatically collect certain information about your device, browsing actions, and patterns. This may include your IP address, browser type, operating system, referring URLs, pages viewed, and the dates/times of your visits.</li>
+        <li><i class="fas fa-regular fa-circle-check"></i> <strong>Cookies:</strong> We use cookies and similar tracking technologies to enhance your experience on our Site, analyze trends, and gather demographic information. You can control the use of cookies through your browser settings.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2><i class="fas fa-cog"></i> How We Use Your Information</h2>
+      <p>We use the information we collect for the following purposes:</p>
+      <ul>
+        <li><i class="fas fa-regular fa-circle-check"></i> To provide, maintain, and improve our Site and services.</li>
+        <li><i class="fas fa-regular fa-circle-check"></i> To respond to your inquiries, comments, or questions.</li>
+        <li><i class="fas fa-regular fa-circle-check"></i> To send you periodic emails with updates, newsletters, or promotional materials (you may opt out at any time).</li>
+        <li><i class="fas fa-regular fa-circle-check"></i> To analyze usage trends and preferences to enhance user experience.</li>
+        <li><i class="fas fa-regular fa-circle-check"></i> To comply with legal obligations and protect the rights, property, or safety of Top10Banks, our users, or others.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2><i class="fas fa-share-alt"></i> Information Sharing</h2>
+      <p>We do not sell, trade, or rent your personal information to third parties. We may share your information in the following limited circumstances:</p>
+      <ul>
+        <li><i class="fas fa-regular fa-circle-check"></i> With trusted service providers who assist us in operating our Site and conducting our business (e.g., email delivery, analytics, hosting). These parties are contractually obligated to keep your information confidential.</li>
+        <li><i class="fas fa-regular fa-circle-check"></i> When required by law, such as to comply with a subpoena, court order, or other legal process.</li>
+        <li><i class="fas fa-regular fa-circle-check"></i> In connection with a merger, acquisition, or sale of all or a portion of our assets, provided that the acquiring entity agrees to protect your information in accordance with this Privacy Policy.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2><i class="fas fa-shield-alt"></i> Data Security</h2>
+      <p>We take reasonable measures to protect your personal information from unauthorized access, use, or disclosure. These measures include:</p>
+      <ul>
+        <li><i class="fas fa-regular fa-circle-check"></i> Using secure servers and encryption technologies where appropriate.</li>
+        <li><i class="fas fa-regular fa-circle-check"></i> Regularly monitoring our systems for potential vulnerabilities.</li>
+        <li><i class="fas fa-regular fa-circle-check"></i> Limiting access to your personal information to authorized personnel who need it to perform their duties.</li>
+      </ul>
+      <div class="highlight-box">
+        <p><i class="fas fa-exclamation-triangle" style="color: #b0c4de; margin-right: 8px;"></i> <strong>Please note:</strong> No method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee its absolute security.</p>
+      </div>
+    </div>
+
+    <div>
+      <h2><i class="fas fa-cookie-bite"></i> Cookies &amp; Tracking</h2>
+      <p>We use cookies to improve your experience on our Site. Cookies are small text files stored on your device that help us remember your preferences and understand how you interact with our content. You can choose to disable cookies in your browser settings, but this may affect the functionality of the Site.</p>
+      <p>The types of cookies we use include:</p>
+      <ul>
+        <li><i class="fas fa-regular fa-circle-check"></i> <strong>Essential Cookies:</strong> Necessary for the basic functioning of the Site.</li>
+        <li><i class="fas fa-regular fa-circle-check"></i> <strong>Analytics Cookies:</strong> Help us understand how visitors use the Site, so we can improve it.</li>
+        <li><i class="fas fa-regular fa-circle-check"></i> <strong>Preference Cookies:</strong> Remember your settings and preferences for a more personalized experience.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2><i class="fas fa-child"></i> Children's Privacy</h2>
+      <p>Our Site is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately. We will take steps to remove such information from our records.</p>
+    </div>
+
+    <div>
+      <h2><i class="fas fa-external-link-alt"></i> Third-Party Links</h2>
+      <p>Our Site may contain links to third-party websites or services that are not owned or controlled by Top10Banks. This Privacy Policy does not apply to those third-party sites. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+    </div>
+
+    <div>
+      <h2><i class="fas fa-user-cog"></i> Your Rights &amp; Choices</h2>
+      <p>Depending on your location, you may have certain rights regarding your personal information, including:</p>
+      <ul>
+        <li><i class="fas fa-regular fa-circle-check"></i> <strong>Access:</strong> Request a copy of the personal information we hold about you.</li>
+        <li><i class="fas fa-regular fa-circle-check"></i> <strong>Correction:</strong> Request that we correct any inaccuracies in your personal information.</li>
+        <li><i class="fas fa-regular fa-circle-check"></i> <strong>Deletion:</strong> Request that we delete your personal information, subject to certain exceptions.</li>
+        <li><i class="fas fa-regular fa-circle-check"></i> <strong>Opt-Out:</strong> Unsubscribe from our marketing communications at any time by clicking the "unsubscribe" link in our emails or contacting us directly.</li>
+      </ul>
+      <p>To exercise any of these rights, please contact us using the details below.</p>
+    </div>
+
+    <div>
+      <h2><i class="fas fa-sync-alt"></i> Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will post any changes on this page and update the "Last Updated" date below. We encourage you to review this policy periodically to stay informed about how we protect your information.</p>
+    </div>
+
+    <div>
+      <h2><i class="fas fa-phone"></i> Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:</p>
+      <p><i class="fas fa-envelope" style="color: #1a73e8; margin-right: 0.5rem;"></i> <a href="mailto:info@southwindtech.com" style="color: #1a73e8; text-decoration: none;">info@southwindtech.com</a></p>
+      <p><i class="fas fa-globe" style="color: #1a73e8; margin-right: 0.5rem;"></i> <a href="https://top10-bank-usa.rk9869017.workers.dev/" style="color: #1a73e8; text-decoration: none;">top10-bank-usa.rk9869017.workers.dev</a></p>
+    </div>
+
+    <div class="last-updated">
+      <i class="fas fa-clock" style="color: #1a73e8; margin-right: 0.5rem;"></i> Last Updated: July 29, 2026
+    </div>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="professional-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3><i class="fas fa-building-columns"></i> Top10Banks</h3>
+        <p>Your trusted guide to America's leading financial institutions. Data-driven, transparent, and professional.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="https://top10-bank-usa.rk9869017.workers.dev/"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+          <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#"><i class="fas fa-file-contract"></i> Terms &amp; Conditions</a></li>
+          <li><a href="#"><i class="fas fa-lock"></i> Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Top10Banks. All rights reserved.</span>
+    </div>
+
+    <div class="disclaimer">
+      <i class="fas fa-exclamation-triangle" style="margin-right: 6px; color: #b0c4de;"></i>
+      Disclaimer: The information provided on this website is for general informational purposes only. 
+      All bank rankings, asset figures, and ratings are based on publicly available data and are subject to change. 
+      We do not guarantee the accuracy or completeness of this information. Always consult official sources for the latest data.
+    </div>
+  </footer>
+
+</div>
+<!-- end container -->
+</body>
+</html>
