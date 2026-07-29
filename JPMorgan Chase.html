@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JPMorgan Chase · In-Depth Profile</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f4f7fc;
+            color: #1e2a3a;
+            line-height: 1.6;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* full-width container – minimal side padding */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        /* ===== HEADER (consistent with homepage) ===== */
+        .site-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0.5rem 0.8rem 0.5rem;
+            border-bottom: 2px solid #eef2f7;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(145deg, #0a2540, #1a3a5a);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 10px rgba(10, 37, 64, 0.15);
+        }
+
+        .logo-text {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0a2540;
+            letter-spacing: -0.5px;
+        }
+        .logo-text span {
+            color: #1a73e8;
+        }
+
+        .header-tagline {
+            font-size: 0.85rem;
+            color: #4a5f7a;
+            background: #eef6ff;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-weight: 500;
+        }
+        .header-tagline i {
+            color: #1a73e8;
+            margin-right: 4px;
+        }
+
+        /* ===== BACK LINK ===== */
+        .back-link {
+            margin-bottom: 1.5rem;
+        }
+        .back-link a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+            color: #0a2540;
+        }
+
+        /* ===== PROFILE HERO ===== */
+        .profile-hero {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: #f9fcff;
+            border-radius: 28px;
+            padding: 2rem 2.5rem;
+            border: 1px solid #e2ecf7;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .profile-hero .bank-big-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(145deg, #122b44, #0a1e30);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.8rem;
+            box-shadow: 0 10px 20px rgba(10, 37, 64, 0.12);
+            flex-shrink: 0;
+        }
+
+        .profile-hero .hero-text h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #0a2540;
+            letter-spacing: -0.02em;
+        }
+        .profile-hero .hero-text h1 span {
+            color: #1a73e8;
+        }
+        .profile-hero .hero-text .ticker-large {
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: #5b6f87;
+            background: #eef2f7;
+            padding: 0.2rem 1.2rem;
+            border-radius: 40px;
+            margin-left: 0.8rem;
+        }
+        .profile-hero .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 0.4rem;
+            flex-wrap: wrap;
+        }
+        .profile-hero .hero-stats span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 1rem;
+            color: #2c405a;
+        }
+        .profile-hero .hero-stats i {
+            color: #1a73e8;
+        }
+
+        /* ===== MAIN CONTENT (800+ words) ===== */
+        .profile-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .profile-content p {
+            font-size: 1.05rem;
+            color: #1e2f44;
+        }
+
+        .profile-content h2 {
+            font-size: 1.6rem;
+            color: #0a2540;
+            margin-top: 0.3rem;
+            margin-bottom: 0.2rem;
+            font-weight: 600;
+            border-bottom: 2px solid #eef2f7;
+            padding-bottom: 0.3rem;
+        }
+
+        .profile-content h2 i {
+            color: #1a73e8;
+            margin-right: 0.6rem;
+        }
+
+        .profile-content ul {
+            list-style: none;
+            padding-left: 0.5rem;
+        }
+        .profile-content ul li {
+            padding: 0.3rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            font-size: 1rem;
+            color: #1e2f44;
+        }
+        .profile-content ul li i {
+            color: #1a73e8;
+            margin-top: 0.2rem;
+            width: 1.2rem;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            background: #f9fcff;
+            padding: 1.2rem 1.5rem;
+            border-radius: 20px;
+            border: 1px solid #e2ecf7;
+            margin: 0.5rem 0;
+        }
+        .stat-grid .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .stat-grid .stat-item .label {
+            font-size: 0.8rem;
+            color: #5b6f87;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .stat-grid .stat-item .value {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0a2540;
+        }
+
+        /* ===== FOOTER (same as homepage) ===== */
+        .professional-footer {
+            margin-top: 1.5rem;
+            border-top: 2px solid #eef2f7;
+            padding-top: 1.8rem;
+            padding-bottom: 0.8rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.2rem;
+            color: #0a2540;
+            margin-bottom: 0.2rem;
+        }
+        .footer-brand h3 i {
+            color: #1a73e8;
+            margin-right: 6px;
+        }
+        .footer-brand p {
+            color: #4a5f7a;
+            font-size: 0.85rem;
+            max-width: 260px;
+        }
+
+        .footer-links h4 {
+            font-size: 0.95rem;
+            color: #0a2540;
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-links ul li {
+            margin-bottom: 0.4rem;
+        }
+        .footer-links ul li a {
+            color: #3e5a76;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .footer-links ul li a i {
+            color: #1a73e8;
+            font-size: 0.75rem;
+            width: 1rem;
+        }
+        .footer-links ul li a:hover {
+            color: #0a2540;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #e2eaf2;
+            padding-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            color: #5b6f87;
+        }
+
+        .footer-bottom .social-icons a {
+            color: #4a5f7a;
+            margin-left: 0.8rem;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .footer-bottom .social-icons a:hover {
+            color: #1a73e8;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .container {
+                padding: 0 1rem 1rem 1rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.2rem;
+            }
+            .profile-hero {
+                padding: 1.5rem;
+            }
+            .profile-hero .hero-text h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 0 0.8rem 0.8rem 0.8rem;
+            }
+            .profile-hero {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.2rem;
+            }
+            .profile-hero .bank-big-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+            }
+            .profile-hero .hero-text h1 {
+                font-size: 1.8rem;
+            }
+            .profile-hero .hero-text .ticker-large {
+                font-size: 0.9rem;
+                padding: 0.1rem 0.8rem;
+                margin-left: 0;
+                display: inline-block;
+                margin-top: 0.2rem;
+            }
+            .profile-hero .hero-stats {
+                gap: 1rem;
+            }
+            .profile-content p {
+                font-size: 0.95rem;
+            }
+            .stat-grid {
+                grid-template-columns: 1fr 1fr;
+                padding: 1rem;
+            }
+            .site-header {
+                padding: 0.8rem 0.2rem 0.6rem 0.2rem;
+            }
+            .logo-text {
+                font-size: 1.3rem;
+            }
+            .header-tagline {
+                font-size: 0.7rem;
+                padding: 0.2rem 0.7rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-bottom .social-icons a {
+                margin: 0 0.4rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profile-hero .hero-stats {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            .stat-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <header class="site-header">
+            <div class="logo-area">
+                <div class="logo-icon"><i class="fas fa-building-columns"></i></div>
+                <div class="logo-text">Top<span>10</span>Banks</div>
+            </div>
+            <div class="header-tagline">
+                <i class="fas fa-flag-usa"></i> America's financial leaders · 2026
+            </div>
+        </header>
+
+        <!-- ===== BACK LINK ===== -->
+        <div class="back-link">
+            <a href="javascript:history.back()"><i class="fas fa-arrow-left"></i> Back to Top 10 Banks</a>
+        </div>
+
+        <!-- ===== PROFILE HERO ===== -->
+        <div class="profile-hero">
+            <div class="bank-big-icon"><i class="fas fa-building-columns"></i></div>
+            <div class="hero-text">
+                <h1>JPMorgan Chase <span class="ticker-large">JPM</span></h1>
+                <div class="hero-stats">
+                    <span><i class="fas fa-dollar-sign"></i> $3.9T assets</span>
+                    <span><i class="fas fa-globe-americas"></i> Global · NYC</span>
+                    <span><i class="fas fa-users"></i> 300k+ employees</span>
+                    <span><i class="fas fa-star"></i> AAA rating</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== MAIN CONTENT (800+ words) ===== -->
+        <div class="profile-content">
+
+            <h2><i class="fas fa-flag-usa"></i> Overview</h2>
+            <p><strong>JPMorgan Chase &amp; Co.</strong> is the largest bank in the United States and one of the most influential financial institutions in the world. Headquartered in New York City, it was formed through the merger of J.P. Morgan &amp; Co. and Chase Manhattan Corporation in 2000, and later acquired Bear Stearns and Washington Mutual during the 2008 financial crisis. Today, it serves millions of consumers, small businesses, and many of the world's most prominent corporate, institutional, and government clients.</p>
+
+            <p>With over <strong>$3.9 trillion in assets</strong>, JPMorgan Chase operates across six major business segments: Consumer &amp; Community Banking, Corporate &amp; Investment Bank, Commercial Banking, Asset &amp; Wealth Management, and the Corporate/Private Equity division. Its global footprint spans more than 100 countries, and it is consistently ranked as the most systemically important bank by the Financial Stability Board.</p>
+
+            <div class="stat-grid">
+                <div class="stat-item"><span class="label">Total Assets</span><span class="value">$3.9T</span></div>
+                <div class="stat-item"><span class="label">Market Cap</span><span class="value">~$620B</span></div>
+                <div class="stat-item"><span class="label">Employees</span><span class="value">300,000+</span></div>
+                <div class="stat-item"><span class="label">Credit Rating</span><span class="value">AAA</span></div>
+            </div>
+
+            <h2><i class="fas fa-chart-line"></i> Business &amp; Operations</h2>
+            <p>JPMorgan Chase is a powerhouse in both retail and investment banking. Its <strong>Consumer &amp; Community Banking</strong> division provides deposit, credit, and payment services to over 60 million U.S. households through 4,700 branches and 17,000 ATMs. The <strong>Corporate &amp; Investment Bank</strong> is a global leader in M&amp;A advisory, capital markets, and treasury services, routinely advising on the largest and most complex transactions worldwide.</p>
+
+            <p>The bank's <strong>Asset &amp; Wealth Management</strong> arm manages over $3.5 trillion in client assets, serving high-net-worth individuals, family offices, and institutional investors. Its <strong>Commercial Banking</strong> division provides lending, treasury, and investment banking solutions to mid-sized companies, real estate firms, and not-for-profit organizations.</p>
+
+            <p>JPMorgan Chase is also a pioneer in financial technology. It invests over $14 billion annually in technology and innovation, including AI-powered fraud detection, blockchain-based payment systems (JPM Coin), and advanced data analytics. The bank's digital platform, Chase Mobile, boasts over 50 million active users, making it one of the most widely used banking apps in the world.</p>
+
+            <h2><i class="fas fa-shield-alt"></i> Safety, Regulation &amp; Trust</h2>
+            <p>As a <strong>systemically important financial institution (SIFI)</strong>, JPMorgan Chase is subject to the highest level of regulatory oversight from the Federal Reserve, OCC, and FDIC. It consistently passes the Fed's annual stress tests with significant capital buffers, demonstrating its resilience even in severe economic scenarios. The bank maintains a Common Equity Tier 1 (CET1) ratio well above regulatory minimums, ensuring it can absorb losses and continue lending during downturns.</p>
+
+            <p>JPMorgan Chase is also a leader in corporate governance and sustainability. It has committed to facilitating over $2.5 trillion in sustainable finance by 2030, including green bonds, renewable energy financing, and social impact initiatives. The bank has been recognized for its diversity, equity, and inclusion programs, and it actively supports community development through philanthropic contributions exceeding $300 million annually.</p>
+
+            <h2><i class="fas fa-rocket"></i> Innovation &amp; Future Outlook</h2>
+            <p>Looking ahead, JPMorgan Chase is focused on transforming banking through technology. Its investment in artificial intelligence and machine learning has improved fraud detection, personalized customer experiences, and risk management. The bank's blockchain and distributed ledger technology (DLT) initiatives are poised to revolutionize cross-border payments and trade finance.</p>
+
+            <p>JPMorgan Chase is also expanding its digital offerings, with the upcoming launch of a fully digital bank for the U.K. market and the continued growth of its Chase brand internationally. The bank's commitment to open banking and API integration positions it as a key player in the evolving financial ecosystem.</p>
+
+            <p>With a strong balance sheet, a diversified business model, and a forward-looking strategy, JPMorgan Chase remains the gold standard in global banking. It is not only a financial institution but a cornerstone of the American economy, playing a vital role in the prosperity of individuals, businesses, and communities across the nation and around the world.</p>
+
+            <p style="margin-top: 1rem; font-size: 0.95rem; color: #2a4a6a; border-top: 1px solid #deeaf5; padding-top: 0.8rem;">
+                <i class="fas fa-info-circle" style="color: #1a73e8;"></i> This profile is for informational purposes. Data is based on Q2 2026 reports and public disclosures. Always consult official sources for the latest information.
+            </p>
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="professional-footer">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3><i class="fas fa-building-columns"></i> Top10Banks</h3>
+                    <p>Your trusted guide to America's leading financial institutions. Data-driven, transparent, and professional.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-file-contract"></i> Terms &amp; Conditions</a></li>
+                        <li><a href="#"><i class="fas fa-lock"></i> Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-newspaper"></i> Blog</a></li>
+                        <li><a href="#"><i class="fas fa-chart-simple"></i> Market Data</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Top10Banks. All rights reserved.</span>
+                <div class="social-icons">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="RSS"><i class="fas fa-rss"></i></a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- end container -->
+</body>
+</html>
