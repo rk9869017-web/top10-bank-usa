@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Top 10 Banks in USA · Southwindtech</title>
+  <title>About · Top 10 Banks in USA</title>
   <!-- Font Awesome 6 (free) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
@@ -29,7 +29,7 @@
       margin: 0 auto;
       background: #ffffff;
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
-      padding: 0 1.5rem 0 1.5rem;
+      padding: 0 1.5rem 1.5rem 1.5rem;
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -97,41 +97,46 @@
       margin-right: 4px;
     }
 
-    /* ===== INTRO SECTION ===== */
-    .intro-section {
+    /* ===== BACK LINK ===== */
+    .back-link {
+      margin-bottom: 1.5rem;
+    }
+    .back-link a {
+      color: #1a73e8;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      transition: 0.2s;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+      color: #0a2540;
+    }
+
+    /* ===== ABOUT CONTENT ===== */
+    .about-hero {
       text-align: center;
-      padding: 1rem 0.5rem 2rem 0.5rem;
+      padding: 2rem 0.5rem 2rem 0.5rem;
       border-bottom: 2px solid #eef2f7;
       margin-bottom: 2rem;
     }
 
-    .intro-section .badge {
-      display: inline-block;
-      background: #0a2540;
-      color: white;
-      font-weight: 600;
-      font-size: 0.8rem;
-      letter-spacing: 1px;
-      padding: 0.4rem 1.2rem;
-      border-radius: 40px;
-      text-transform: uppercase;
-      margin-bottom: 0.8rem;
-    }
-
-    .intro-section h1 {
+    .about-hero h1 {
       font-size: 2.8rem;
       font-weight: 700;
-      letter-spacing: -0.02em;
       color: #0a2540;
       margin-bottom: 0.5rem;
     }
 
-    .intro-section h1 i {
+    .about-hero h1 i {
       color: #1a73e8;
       margin-right: 0.5rem;
     }
 
-    .intro-section .subhead {
+    .about-hero .subhead {
       font-size: 1.2rem;
       color: #425466;
       max-width: 780px;
@@ -139,185 +144,91 @@
       font-weight: 400;
     }
 
-    .intro-section .highlight {
-      background: #eef6ff;
-      display: inline-block;
-      padding: 0.3rem 1.2rem;
-      border-radius: 40px;
-      color: #1a5bbf;
-      font-weight: 500;
-      font-size: 0.95rem;
-      margin-top: 0.3rem;
-    }
-
-    .intro-section .highlight i {
-      margin-right: 0.4rem;
-    }
-
-    .intro-expanded {
-      max-width: 940px;
-      margin: 1.5rem auto 0.5rem auto;
-      text-align: left;
-      font-size: 1rem;
-      color: #1e2f44;
-      background: #f9fcff;
-      padding: 1.5rem 2rem;
-      border-radius: 24px;
-      border: 1px solid #e2ecf7;
-      box-shadow: inset 0 2px 4px rgba(0,20,40,0.02);
-    }
-
-    .intro-expanded p {
-      margin-bottom: 0.8rem;
-    }
-
-    .intro-expanded p:last-child {
-      margin-bottom: 0;
-    }
-
-    .intro-expanded i {
-      color: #1a73e8;
-      margin-right: 6px;
-    }
-
-    .intro-expanded strong {
-      color: #0a2540;
-    }
-
-    .stat-badge {
-      display: inline-flex;
-      background: #e2ebf5;
-      padding: 0.1rem 1rem;
-      border-radius: 40px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: #0a2a4a;
-      margin: 0.2rem 0.2rem 0.2rem 0;
-    }
-
-    .stat-badge i {
-      color: #1a5bbf;
-      margin-right: 6px;
-    }
-
-    /* ===== BANK GRID ===== */
-    .bank-grid {
+    .about-content {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 2rem;
       margin-bottom: 2rem;
     }
 
-    .bank-card {
-      display: flex;
-      align-items: center;
-      background: #fafbff;
-      border-radius: 18px;
-      padding: 1rem 1.5rem;
-      transition: all 0.2s ease;
-      border: 1px solid #e9edf4;
-      box-shadow: 0 4px 8px rgba(0, 20, 40, 0.02);
-    }
-
-    .bank-card:hover {
-      background: #ffffff;
-      border-color: #cbd5e1;
-      box-shadow: 0 12px 24px -8px rgba(0, 30, 60, 0.08);
-      transform: scale(1.003);
-    }
-
-    .bank-card a {
-      display: contents;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .bank-rank {
-      font-weight: 700;
+    .about-content h2 {
       font-size: 1.6rem;
-      color: #b0c4de;
-      min-width: 3rem;
-      text-align: center;
-      letter-spacing: -0.02em;
-      font-feature-settings: "tnum";
-    }
-
-    .bank-icon {
-      width: 54px;
-      height: 54px;
-      background: #0a2540;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 1.6rem;
-      margin: 0 1rem 0 0.3rem;
-      flex-shrink: 0;
-      background: linear-gradient(145deg, #122b44, #0a1e30);
-      box-shadow: 0 6px 12px rgba(10, 37, 64, 0.08);
-    }
-
-    .bank-icon i {
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-    }
-
-    .bank-info {
-      flex: 1;
-    }
-
-    .bank-name {
-      font-size: 1.3rem;
+      color: #0a2540;
+      margin-top: 0.3rem;
+      margin-bottom: 0.2rem;
       font-weight: 600;
-      color: #0a2540;
-      letter-spacing: -0.01em;
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 0.4rem;
+      border-bottom: 2px solid #eef2f7;
+      padding-bottom: 0.3rem;
     }
 
-    .bank-name .ticker {
-      font-weight: 400;
-      font-size: 0.75rem;
-      color: #5b6f87;
-      background: #eef2f7;
-      padding: 0.1rem 0.7rem;
-      border-radius: 30px;
-      letter-spacing: 0.3px;
-    }
-
-    .bank-desc {
-      color: #2c405a;
-      font-size: 0.9rem;
-      margin-top: 0.15rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.3rem 1.2rem;
-    }
-
-    .bank-desc span {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      color: #3e5a76;
-    }
-
-    .bank-desc i {
+    .about-content h2 i {
       color: #1a73e8;
-      width: 1rem;
-      font-size: 0.85rem;
+      margin-right: 0.6rem;
     }
 
-    .bank-assets {
-      font-weight: 500;
+    .about-content p {
+      font-size: 1.05rem;
+      color: #1e2f44;
+      margin-bottom: 0.8rem;
+    }
+
+    .about-content ul {
+      list-style: none;
+      padding-left: 0.5rem;
+    }
+
+    .about-content ul li {
+      padding: 0.3rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 1rem;
+      color: #1e2f44;
+    }
+
+    .about-content ul li i {
+      color: #1a73e8;
+      margin-top: 0.2rem;
+      width: 1.2rem;
+    }
+
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin: 0.5rem 0 1rem 0;
+    }
+
+    .mission-card {
+      background: #f9fcff;
+      padding: 1.5rem 1.2rem;
+      border-radius: 16px;
+      border: 1px solid #e2ecf7;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .mission-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: 0 8px 16px -4px rgba(0, 20, 40, 0.06);
+    }
+
+    .mission-card i {
+      font-size: 2.2rem;
+      color: #1a73e8;
+      margin-bottom: 0.5rem;
+    }
+
+    .mission-card h4 {
+      font-size: 1.1rem;
       color: #0a2540;
-      background: #e9f0fa;
-      padding: 0.15rem 0.9rem;
-      border-radius: 30px;
-      font-size: 0.8rem;
-      white-space: nowrap;
-      margin-left: 0.3rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .mission-card p {
+      font-size: 0.9rem;
+      color: #4a5f7a;
+      margin-bottom: 0;
     }
 
     /* ===== FOOTER ===== */
@@ -326,7 +237,6 @@
       border-top: 2px solid #eef2f7;
       padding-top: 1.8rem;
       padding-bottom: 0.8rem;
-      width: 100%;
     }
 
     .footer-grid {
@@ -363,11 +273,9 @@
       list-style: none;
       padding: 0;
     }
-
     .footer-links ul li {
       margin-bottom: 0.4rem;
     }
-
     .footer-links ul li a {
       color: #3e5a76;
       text-decoration: none;
@@ -377,13 +285,11 @@
       align-items: center;
       gap: 6px;
     }
-
     .footer-links ul li a i {
       color: #1a73e8;
       font-size: 0.75rem;
       width: 1rem;
     }
-
     .footer-links ul li a:hover {
       color: #0a2540;
       text-decoration: underline;
@@ -393,7 +299,7 @@
       border-top: 1px solid #e2eaf2;
       padding-top: 1rem;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       flex-wrap: wrap;
       gap: 0.5rem;
@@ -415,175 +321,58 @@
       width: 100%;
     }
 
-    /* ============================================================ */
     /* ===== RESPONSIVE ===== */
-    /* ============================================================ */
-
-    @media (max-width: 1024px) {
-      .container {
-        padding: 0 1.2rem 0 1.2rem;
-      }
-      .intro-section h1 {
-        font-size: 2.5rem;
-      }
-      .intro-expanded {
-        padding: 1.2rem 1.5rem;
-      }
-    }
-
     @media (max-width: 900px) {
       .container {
-        padding: 0 1rem 0 1rem;
+        padding: 0 1rem 1rem 1rem;
       }
       .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 1.2rem;
       }
-      .intro-section h1 {
+      .about-hero h1 {
         font-size: 2.2rem;
-      }
-      .bank-card {
-        padding: 0.9rem 1.2rem;
-      }
-      .bank-rank {
-        font-size: 1.4rem;
-        min-width: 2.5rem;
-      }
-      .bank-icon {
-        width: 48px;
-        height: 48px;
-        font-size: 1.4rem;
-        margin: 0 0.8rem 0 0.2rem;
-      }
-      .bank-name {
-        font-size: 1.2rem;
-      }
-      .bank-desc {
-        font-size: 0.85rem;
-        gap: 0.2rem 0.8rem;
-      }
-      .bank-assets {
-        font-size: 0.75rem;
-        padding: 0.1rem 0.7rem;
       }
     }
 
     @media (max-width: 700px) {
       .container {
-        padding: 0 0.8rem 0 0.8rem;
+        padding: 0 0.8rem 0.8rem 0.8rem;
       }
-      
-      .site-header {
-        padding: 0.8rem 0.2rem 0.6rem 0.2rem;
-        flex-direction: row;
-        justify-content: space-between;
+      .about-hero {
+        padding: 1rem 0.2rem 1.2rem 0.2rem;
       }
-      .logo-text {
-        font-size: 1.2rem;
-      }
-      .logo-icon {
-        width: 36px;
-        height: 36px;
-        font-size: 1.2rem;
-      }
-      .header-tagline {
-        font-size: 0.65rem;
-        padding: 0.2rem 0.6rem;
-      }
-
-      .intro-section {
-        padding: 0.5rem 0.2rem 1.2rem 0.2rem;
-      }
-      .intro-section h1 {
+      .about-hero h1 {
         font-size: 1.8rem;
       }
-      .intro-section .subhead {
+      .about-hero .subhead {
         font-size: 1rem;
-        padding: 0 0.2rem;
       }
-      .intro-section .highlight {
-        font-size: 0.8rem;
-        padding: 0.2rem 0.8rem;
+      .about-content p {
+        font-size: 0.95rem;
       }
-      .intro-expanded {
-        padding: 0.8rem 1rem;
-        font-size: 0.9rem;
-        margin: 1rem auto 0.3rem auto;
-        border-radius: 18px;
+      .mission-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
       }
-      .intro-expanded p {
-        margin-bottom: 0.6rem;
+      .site-header {
+        padding: 0.8rem 0.2rem 0.6rem 0.2rem;
       }
-      .stat-badge {
-        font-size: 0.75rem;
-        padding: 0.05rem 0.7rem;
-        margin: 0.1rem 0.1rem 0.1rem 0;
+      .logo-text {
+        font-size: 1.3rem;
       }
-
-      .bank-card {
-        flex-wrap: wrap;
-        padding: 0.7rem 0.8rem;
-        border-radius: 14px;
-        gap: 0.2rem;
-      }
-      .bank-rank {
-        min-width: 2rem;
-        font-size: 1.2rem;
-      }
-      .bank-icon {
-        width: 38px;
-        height: 38px;
-        font-size: 1.1rem;
-        margin: 0 0.6rem 0 0.1rem;
-        border-radius: 12px;
-      }
-      .bank-name {
-        font-size: 1rem;
-        gap: 0.2rem;
-      }
-      .bank-name .ticker {
-        font-size: 0.65rem;
-        padding: 0.05rem 0.5rem;
-      }
-      .bank-desc {
-        font-size: 0.75rem;
-        flex-direction: column;
-        gap: 0.05rem;
-        margin-top: 0.1rem;
-      }
-      .bank-desc span {
-        gap: 0.2rem;
-      }
-      .bank-desc i {
-        width: 0.8rem;
+      .header-tagline {
         font-size: 0.7rem;
-      }
-      .bank-assets {
-        font-size: 0.65rem;
-        padding: 0.05rem 0.6rem;
-        margin-left: 0;
-        align-self: flex-start;
-      }
-
-      /* ===== MOBILE RESPONSIVE FOOTER ===== */
-      .professional-footer {
-        padding-top: 1.2rem;
-        margin-top: 1rem;
+        padding: 0.2rem 0.7rem;
       }
       .footer-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
-        text-align: center;
-      }
-      .footer-brand {
+        gap: 0.8rem;
         text-align: center;
       }
       .footer-brand p {
         max-width: 100%;
-        margin: 0.2rem auto;
-      }
-      .footer-links {
-        text-align: center;
+        margin: 0 auto;
       }
       .footer-links ul {
         display: flex;
@@ -596,21 +385,20 @@
       .footer-bottom {
         flex-direction: column;
         text-align: center;
-        gap: 0.3rem;
-        justify-content: center;
-      }
-      .disclaimer {
-        font-size: 0.65rem;
-        padding-top: 0.5rem;
-        margin-top: 0.5rem;
       }
     }
 
     @media (max-width: 480px) {
       .container {
-        padding: 0 0.5rem 0 0.5rem;
+        padding: 0 0.5rem 0.5rem 0.5rem;
       }
-
+      .about-hero h1 {
+        font-size: 1.5rem;
+      }
+      .mission-grid {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+      }
       .logo-text {
         font-size: 1rem;
       }
@@ -624,55 +412,6 @@
         font-size: 0.55rem;
         padding: 0.15rem 0.5rem;
       }
-
-      .intro-section h1 {
-        font-size: 1.5rem;
-      }
-      .intro-section .subhead {
-        font-size: 0.9rem;
-      }
-      .intro-expanded {
-        padding: 0.6rem 0.8rem;
-        font-size: 0.8rem;
-        border-radius: 14px;
-      }
-
-      .bank-card {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0.6rem 0.7rem;
-        gap: 0.1rem;
-      }
-      .bank-rank {
-        align-self: flex-start;
-        font-size: 1rem;
-        min-width: 1.6rem;
-      }
-      .bank-icon {
-        width: 32px;
-        height: 32px;
-        font-size: 0.9rem;
-        margin: 0.1rem 0 0.1rem 0;
-        border-radius: 10px;
-      }
-      .bank-name {
-        font-size: 0.9rem;
-        gap: 0.15rem;
-      }
-      .bank-name .ticker {
-        font-size: 0.6rem;
-        padding: 0.05rem 0.4rem;
-      }
-      .bank-desc {
-        font-size: 0.7rem;
-        gap: 0.05rem;
-      }
-      .bank-assets {
-        font-size: 0.6rem;
-        padding: 0.05rem 0.5rem;
-      }
-
-      /* Footer mobile */
       .footer-brand h3 {
         font-size: 1rem;
       }
@@ -680,45 +419,16 @@
         font-size: 0.75rem;
       }
       .footer-links h4 {
-        font-size: 0.85rem;
-        margin-bottom: 0.4rem;
+        font-size: 0.8rem;
       }
       .footer-links ul li a {
         font-size: 0.75rem;
       }
-      .footer-links ul li {
-        margin-bottom: 0.3rem;
-      }
       .footer-bottom {
         font-size: 0.7rem;
       }
-      .footer-grid {
-        gap: 0.8rem;
-      }
       .disclaimer {
         font-size: 0.6rem;
-      }
-    }
-
-    @media (max-width: 360px) {
-      .intro-section h1 {
-        font-size: 1.3rem;
-      }
-      .intro-section .subhead {
-        font-size: 0.8rem;
-      }
-      .intro-expanded {
-        font-size: 0.75rem;
-        padding: 0.5rem 0.6rem;
-      }
-      .bank-name {
-        font-size: 0.8rem;
-      }
-      .bank-desc {
-        font-size: 0.65rem;
-      }
-      .footer-brand p {
-        font-size: 0.7rem;
       }
     }
   </style>
@@ -727,7 +437,7 @@
 
 <div class="container">
 
-  <!-- ===== HEADER with Southwindtech branding and logo image ===== -->
+  <!-- ===== HEADER ===== -->
   <header class="site-header">
     <div class="logo-area">
       <div class="logo-icon">
@@ -740,236 +450,88 @@
     </div>
   </header>
 
-  <!-- ===== INTRO SECTION ===== -->
-  <div class="intro-section">
-    <div class="badge"><i class="fas fa-university" style="margin-right: 8px;"></i> 2026 ranking</div>
-    <h1><i class="fas fa-building-columns"></i> Top 10 Banks in USA</h1>
-    <p class="subhead">
-      <strong>Industry leaders</strong> — trusted by millions, driving the American economy.
-      From Wall Street to Main Street, these institutions define modern banking.
-    </p>
-    <div class="highlight">
-      <i class="fas fa-chart-line"></i> Assets, reputation &amp; reach · Updated 2026
-    </div>
-
-    <div class="intro-expanded">
-      <p><i class="fas fa-flag-usa"></i> <strong>The American banking system</strong> is the backbone of the global financial architecture. With total assets exceeding $24 trillion, U.S. banks serve over 300 million consumers and millions of businesses worldwide. The institutions listed here represent the pinnacle of stability, innovation, and service — from retail banking to investment management, wealth advisory, and cutting-edge fintech integration.</p>
-
-      <p><i class="fas fa-chart-simple"></i> <strong>Why these 10?</strong> Our ranking is based on a composite of total assets, market capitalization, brand value, customer satisfaction, and regulatory standing (FDIC, OCC, Federal Reserve). Data is sourced from Q2 2026 Federal Reserve reports, S&P Global, and independent analyst ratings. Each bank on this list has demonstrated exceptional resilience, digital transformation, and commitment to community development.</p>
-
-      <p><i class="fas fa-building-columns"></i> <strong>JPMorgan Chase</strong> ( #1 ) leads with over $3.9 trillion in assets and a global presence in over 100 countries. It is the most systemically important bank, with a AAA rating from major agencies. <strong>Bank of America</strong> ( #2 ) excels in consumer banking and ESG initiatives, while <strong>Wells Fargo</strong> ( #3 ) continues its strong recovery with a focus on middle-market lending. <strong>Citigroup</strong> ( #4 ) remains a global powerhouse in cross-border transactions and treasury services.</p>
-
-      <p><i class="fas fa-hand-holding-dollar"></i> <strong>Investment banking giants</strong> — <strong>Goldman Sachs</strong> ( #5 ) and <strong>Morgan Stanley</strong> ( #6 ) — are the engines of capital markets, advising on M&A, IPOs, and wealth management for ultra-high-net-worth clients. Their influence extends far beyond Wall Street, shaping economic policies and corporate strategies.</p>
-
-      <p><i class="fas fa-building"></i> <strong>Regional strength meets national scale</strong> — <strong>U.S. Bancorp</strong> ( #7 ) and <strong>PNC Financial</strong> ( #8 ) are pillars of the Midwest and East Coast, with deep roots in community banking and commercial lending. <strong>Truist Financial</strong> ( #9 ) emerged from the merger of BB&T and SunTrust, creating a formidable force in the Southeast. <strong>Capital One</strong> ( #10 ) revolutionized digital banking with its data-driven approach and remains a top choice for tech-savvy consumers.</p>
-
-      <p><i class="fas fa-shield-alt"></i> <strong>Safety and trust</strong> — All banks listed are FDIC-insured and maintain capital ratios well above regulatory minimums. They have passed the Fed's annual stress tests with flying colors, ensuring they can weather economic downturns. Their combined workforce exceeds 1.4 million employees, making them major employers and economic drivers.</p>
-
-      <p><i class="fas fa-rocket"></i> <strong>Innovation and future outlook</strong> — From AI-powered fraud detection to blockchain-based settlement systems, these banks are investing heavily in technology. They are also leading the transition to sustainable finance, with over $500 billion committed to green bonds and net-zero initiatives. As the financial landscape evolves, these institutions are poised to remain at the forefront.</p>
-
-      <p style="margin-top: 0.4rem;">
-        <span class="stat-badge"><i class="fas fa-database"></i> Total assets: ~$20.5T</span>
-        <span class="stat-badge"><i class="fas fa-users"></i> 1.4M+ employees</span>
-        <span class="stat-badge"><i class="fas fa-globe"></i> 80+ countries</span>
-        <span class="stat-badge"><i class="fas fa-star"></i> Avg credit rating: A+</span>
-      </p>
-      <p style="font-size: 0.9rem; color: #2a4a6a; border-top: 1px solid #deeaf5; padding-top: 0.6rem; margin-top: 0.4rem;">
-        <i class="fas fa-info-circle" style="color: #1a73e8;"></i> This list is for informational purposes. Rankings are based on publicly available data as of 2026. Always consult official sources for the latest financial information.
-      </p>
-    </div>
+  <!-- ===== BACK LINK ===== -->
+  <div class="back-link">
+    <a href="https://top10-bank-usa.rk9869017.workers.dev/"><i class="fas fa-arrow-left"></i> Back to Home</a>
   </div>
 
-  <!-- ===== BANK GRID ===== -->
-  <div class="bank-grid">
-    <!-- 1. JPMorgan Chase -->
-    <div class="bank-card">
-      <a href="https://top10-bank-usa.rk9869017.workers.dev/JPMorgan%20Chase" target="_blank">
-        <div class="bank-rank">#1</div>
-        <div class="bank-icon"><i class="fas fa-building-columns"></i></div>
-        <div class="bank-info">
-          <div class="bank-name">
-            JPMorgan Chase <span class="ticker">JPM</span>
-            <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $3.9T</span>
-          </div>
-          <div class="bank-desc">
-            <span><i class="fas fa-globe-americas"></i> Global · NYC</span>
-            <span><i class="fas fa-users"></i> 300k+ employees</span>
-            <span><i class="fas fa-star"></i> AAA rating</span>
-          </div>
-        </div>
-      </a>
+  <!-- ===== ABOUT HERO ===== -->
+  <div class="about-hero">
+    <h1><i class="fas fa-info-circle"></i> About Us</h1>
+    <p class="subhead">
+      Your trusted source for understanding America's leading financial institutions.
+      We provide data-driven insights, transparent rankings, and professional analysis.
+    </p>
+  </div>
+
+  <!-- ===== ABOUT CONTENT ===== -->
+  <div class="about-content">
+
+    <div>
+      <h2><i class="fas fa-bullseye"></i> Our Mission</h2>
+      <p>At <strong>Top10Banks</strong>, our mission is to empower individuals, businesses, and investors with clear, accurate, and actionable information about the United States' most important financial institutions. We believe that understanding the banking landscape is essential for making informed financial decisions, whether you're choosing a checking account, evaluating investment opportunities, or analyzing systemic risk.</p>
     </div>
 
-    <!-- 2. Bank of America -->
-    <div class="bank-card">
-      <a href="https://top10-bank-usa.rk9869017.workers.dev/Bank%20of%20America" target="_blank">
-        <div class="bank-rank">#2</div>
-        <div class="bank-icon"><i class="fas fa-landmark"></i></div>
-        <div class="bank-info">
-          <div class="bank-name">
-            Bank of America <span class="ticker">BAC</span>
-            <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $3.2T</span>
-          </div>
-          <div class="bank-desc">
-            <span><i class="fas fa-globe-americas"></i> Charlotte, NC</span>
-            <span><i class="fas fa-users"></i> 210k+ employees</span>
-            <span><i class="fas fa-star"></i> AA- rating</span>
-          </div>
-        </div>
-      </a>
+    <div>
+      <h2><i class="fas fa-database"></i> Our Data &amp; Methodology</h2>
+      <p>Our rankings are based on a comprehensive composite of publicly available data sourced from the following authoritative sources:</p>
+      <ul>
+        <li><i class="fas fa-building-columns"></i> <strong>Federal Reserve Reports</strong> — Quarterly financial data, stress test results, and systemic risk indicators.</li>
+        <li><i class="fas fa-chart-line"></i> <strong>S&amp;P Global Market Intelligence</strong> — Industry benchmarking, credit ratings, and market capitalization.</li>
+        <li><i class="fas fa-star"></i> <strong>Independent Analyst Ratings</strong> — Customer satisfaction surveys, brand value assessments, and regulatory compliance scores.</li>
+        <li><i class="fas fa-shield-alt"></i> <strong>FDIC &amp; OCC Filings</strong> — Deposit and asset data, capital adequacy ratios, and insurance status.</li>
+      </ul>
+      <p>We update our rankings quarterly to reflect the latest financial disclosures, regulatory changes, and market developments. Our composite scoring methodology assigns weight to assets (40%), market capitalization (20%), customer satisfaction (15%), regulatory standing (15%), and digital innovation (10%).</p>
     </div>
 
-    <!-- 3. Wells Fargo -->
-    <div class="bank-card">
-      <a href="https://top10-bank-usa.rk9869017.workers.dev/Wells%20Fargo" target="_blank">
-        <div class="bank-rank">#3</div>
-        <div class="bank-icon"><i class="fas fa-archway"></i></div>
-        <div class="bank-info">
-          <div class="bank-name">
-            Wells Fargo <span class="ticker">WFC</span>
-            <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $1.9T</span>
-          </div>
-          <div class="bank-desc">
-            <span><i class="fas fa-globe-americas"></i> San Francisco, CA</span>
-            <span><i class="fas fa-users"></i> 230k+ employees</span>
-            <span><i class="fas fa-star"></i> A+ rating</span>
-          </div>
+    <div>
+      <h2><i class="fas fa-handshake"></i> Our Values</h2>
+      <div class="mission-grid">
+        <div class="mission-card">
+          <i class="fas fa-regular fa-circle-check"></i>
+          <h4>Transparency</h4>
+          <p>We clearly disclose our data sources, methodology, and any limitations in our analysis.</p>
         </div>
-      </a>
+        <div class="mission-card">
+          <i class="fas fa-regular fa-compass"></i>
+          <h4>Objectivity</h4>
+          <p>Our rankings are unbiased and based solely on quantitative data and verifiable metrics.</p>
+        </div>
+        <div class="mission-card">
+          <i class="fas fa-regular fa-clock"></i>
+          <h4>Currency</h4>
+          <p>We ensure our information reflects the most recent financial reports and market conditions.</p>
+        </div>
+        <div class="mission-card">
+          <i class="fas fa-regular fa-users"></i>
+          <h4>Accessibility</h4>
+          <p>We present complex financial data in a clear, user-friendly format for all audiences.</p>
+        </div>
+      </div>
     </div>
 
-    <!-- 4. Citigroup -->
-    <div class="bank-card">
-      <a href="https://top10-bank-usa.rk9869017.workers.dev/Citigroup" target="_blank">
-        <div class="bank-rank">#4</div>
-        <div class="bank-icon"><i class="fas fa-city"></i></div>
-        <div class="bank-info">
-          <div class="bank-name">
-            Citigroup <span class="ticker">C</span>
-            <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $2.4T</span>
-          </div>
-          <div class="bank-desc">
-            <span><i class="fas fa-globe-americas"></i> NYC</span>
-            <span><i class="fas fa-users"></i> 240k+ employees</span>
-            <span><i class="fas fa-star"></i> A rating</span>
-          </div>
-        </div>
-      </a>
+    <div>
+      <h2><i class="fas fa-rocket"></i> Our Team</h2>
+      <p><strong>Southwindtech</strong> is a team of financial analysts, data scientists, and web developers dedicated to demystifying the banking sector. Our combined expertise spans investment banking, financial regulation, data analytics, and user experience design. We are passionate about making financial information accessible and useful for everyone — from first-time savers to seasoned institutional investors.</p>
+      <p>We are headquartered in the United States and operate remotely, allowing us to access and analyze data from across the globe. Our team is committed to continuous learning and improvement, ensuring our content remains relevant and reliable.</p>
     </div>
 
-    <!-- 5. Goldman Sachs -->
-    <div class="bank-card">
-      <a href="https://top10-bank-usa.rk9869017.workers.dev/Goldman%20Sachs" target="_blank">
-        <div class="bank-rank">#5</div>
-        <div class="bank-icon"><i class="fas fa-chart-pie"></i></div>
-        <div class="bank-info">
-          <div class="bank-name">
-            Goldman Sachs <span class="ticker">GS</span>
-            <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $1.6T</span>
-          </div>
-          <div class="bank-desc">
-            <span><i class="fas fa-globe-americas"></i> NYC</span>
-            <span><i class="fas fa-users"></i> 45k+ employees</span>
-            <span><i class="fas fa-star"></i> A+ rating</span>
-          </div>
-        </div>
-      </a>
+    <div>
+      <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+      <p>We welcome your feedback, questions, and suggestions. Whether you have a question about our methodology, want to suggest a bank for inclusion, or need help understanding our data, we're here to help.</p>
+      <p style="margin-top: 0.5rem;">
+        <i class="fas fa-envelope" style="color: #1a73e8; margin-right: 0.5rem;"></i> 
+        <strong>Email:</strong> <a href="mailto:info@southwindtech.com" style="color: #1a73e8; text-decoration: none;">info@southwindtech.com</a>
+      </p>
+      <p>
+        <i class="fas fa-globe" style="color: #1a73e8; margin-right: 0.5rem;"></i> 
+        <strong>Website:</strong> <a href="https://top10-bank-usa.rk9869017.workers.dev/" style="color: #1a73e8; text-decoration: none;">top10-bank-usa.rk9869017.workers.dev</a>
+      </p>
+      <p style="margin-top: 0.5rem; font-size: 0.95rem; color: #5b6f87;">
+        <i class="fas fa-clock" style="color: #1a73e8;"></i> We aim to respond to all inquiries within 2-3 business days.
+      </p>
     </div>
 
-    <!-- 6. Morgan Stanley -->
-    <div class="bank-card">
-      <a href="https://top10-bank-usa.rk9869017.workers.dev/JPMorgan%20Chase" target="_blank">
-        <div class="bank-rank">#6</div>
-        <div class="bank-icon"><i class="fas fa-arrow-trend-up"></i></div>
-        <div class="bank-info">
-          <div class="bank-name">
-            Morgan Stanley <span class="ticker">MS</span>
-            <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $1.2T</span>
-          </div>
-          <div class="bank-desc">
-            <span><i class="fas fa-globe-americas"></i> NYC</span>
-            <span><i class="fas fa-users"></i> 80k+ employees</span>
-            <span><i class="fas fa-star"></i> A+ rating</span>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <!-- 7. U.S. Bancorp -->
-    <div class="bank-card">
-      <a href="https://top10-bank-usa.rk9869017.workers.dev/U.S.%20Bancorp" target="_blank">
-        <div class="bank-rank">#7</div>
-        <div class="bank-icon"><i class="fas fa-flag-usa"></i></div>
-        <div class="bank-info">
-          <div class="bank-name">
-            U.S. Bancorp <span class="ticker">USB</span>
-            <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $680B</span>
-          </div>
-          <div class="bank-desc">
-            <span><i class="fas fa-globe-americas"></i> Minneapolis, MN</span>
-            <span><i class="fas fa-users"></i> 70k+ employees</span>
-            <span><i class="fas fa-star"></i> A+ rating</span>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <!-- 8. PNC Financial -->
-    <div class="bank-card">
-      <a href="https://top10-bank-usa.rk9869017.workers.dev/PNC%20Financial" target="_blank">
-        <div class="bank-rank">#8</div>
-        <div class="bank-icon"><i class="fas fa-piggy-bank"></i></div>
-        <div class="bank-info">
-          <div class="bank-name">
-            PNC Financial <span class="ticker">PNC</span>
-            <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $560B</span>
-          </div>
-          <div class="bank-desc">
-            <span><i class="fas fa-globe-americas"></i> Pittsburgh, PA</span>
-            <span><i class="fas fa-users"></i> 60k+ employees</span>
-            <span><i class="fas fa-star"></i> A rating</span>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <!-- 9. Truist Financial -->
-    <div class="bank-card">
-      <a href="https://top10-bank-usa.rk9869017.workers.dev/Truist%20Financial" target="_blank">
-        <div class="bank-rank">#9</div>
-        <div class="bank-icon"><i class="fas fa-handshake"></i></div>
-        <div class="bank-info">
-          <div class="bank-name">
-            Truist Financial <span class="ticker">TFC</span>
-            <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $535B</span>
-          </div>
-          <div class="bank-desc">
-            <span><i class="fas fa-globe-americas"></i> Charlotte, NC</span>
-            <span><i class="fas fa-users"></i> 50k+ employees</span>
-            <span><i class="fas fa-star"></i> A- rating</span>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <!-- 10. Capital One -->
-    <div class="bank-card">
-      <a href="https://top10-bank-usa.rk9869017.workers.dev/Capital%20One" target="_blank">
-        <div class="bank-rank">#10</div>
-        <div class="bank-icon"><i class="fas fa-credit-card"></i></div>
-        <div class="bank-info">
-          <div class="bank-name">
-            Capital One <span class="ticker">COF</span>
-            <span class="bank-assets"><i class="fas fa-dollar-sign"></i> $480B</span>
-          </div>
-          <div class="bank-desc">
-            <span><i class="fas fa-globe-americas"></i> McLean, VA</span>
-            <span><i class="fas fa-users"></i> 55k+ employees</span>
-            <span><i class="fas fa-star"></i> A- rating</span>
-          </div>
-        </div>
-      </a>
-    </div>
   </div>
 
   <!-- ===== FOOTER ===== -->
